@@ -101,7 +101,7 @@
 
 \maketitle
 \begin{abstract}
-Mosquitoes are the deadliest (and most annoying) animal family in the world. They come in a huge variety with different traits. In a lot of genera, the female mosquitoes suck blood from hosts for being able to reproduce. As a result some can transmit infectious diseases. For the hunt for blood mosquitoes are equipped with specialized senses. Within the scope of an interactive simulation, we want to present the perceived environment of mosquitoes, thus understanding the perception of the world by an alien life form. The user will be able to steer the mosquito in first person view. This will be embedded in a mini game. There, the objective for the user is to find food and blood and therefore ensure the possibility for reproduction.
+Mosquitoes are one of the deadliest (and most annoying) animal family in the world. They come in a huge variety with different traits. In a lot of genera, the female mosquitoes suck blood from hosts for being able to reproduce. As a result some can transmit infectious diseases. For the hunt for blood mosquitoes are equipped with specialized senses. Within the scope of an interactive simulation, we want to present the perceived environment of mosquitoes, thus understanding the perception of the world by an alien life form. The user will be able to steer the mosquito in first person view. This will be embedded in a mini game. There, the objective for the user is to find food and blood and therefore ensure the possibility for reproduction.
 \end{abstract}
 
 % A category with the (minimum) three required fields
@@ -116,7 +116,7 @@ Mosquitoes are the deadliest (and most annoying) animal family in the world. The
 
 
 \section{Motivation}
-Usually, the only interaction one has with a mosquito is getting stung by it or squash it at the wall. But actually mosquitoes are quite intriguing. Especially the females are interesting, because only they hunt for blood. Furthermore mosquitoes belong to the most deadliest animal family of the world~\cite{billG}, because some species transmit infectious, deadly diseases (e.g. malaria, yellow fever, dengue fever) if they bite a host. They have special senses that enable them to hunt for food and especially for blood sources~\cite{wiki_mosq}. Simulating the usage of these senses allows for an interesting and astonishing experience.
+Usually, the only interaction one has with a mosquito is getting stung by it or squash it at the wall. But actually mosquitoes are quite intriguing. Especially the females are interesting, because only they hunt for blood. Furthermore mosquitoes belong to the most deadliest animal family of the world~\cite{billG}, because some species transmit infectious, deadly diseases (e.g. malaria, yellow fever, dengue fever) if they bite a host. They have special senses that enable them to find food and especially hunt for blood sources~\cite{wiki_mosq}. Simulating the usage of these senses allows for an interesting and astonishing experience.
 
 
 \section{Concept idea}
@@ -126,17 +126,17 @@ The interactive simulation will make it possible for the user to perceive the en
 \section{Project requirements}
 
 \subsection{Science}
-The life of mosquitoes has four phases: egg, larva, pupa and adult. For our interactive simulation we focus on the adult phase. As mentioned earlier only female mosquitoes feed on blood. For some species this is mandatory in order to lay eggs, while for other species it increases the amount eggs. Therefore, we want this simulation to be from the perspective of a female mosquito. The objectives a female mosquito aims to fulfill, during its adult phase, are: foraging, mating, blood sucking and laying eggs. All these objectives can usually be repeated several times.
+The life circle of a mosquitoe has four phases: egg, larva, pupa and adult. For our interactive simulation we focus on the adult phase. As mentioned earlier only female mosquitoes feed on blood. For some species this is mandatory in order to lay eggs, while for other species it increases the amount eggs. Therefore, we want this simulation to be from the perspective of a female mosquito. The objectives, which a female mosquito aims to fulfill during its adult phase are: foraging, mating, blood sucking and laying eggs. All these objectives can usually be repeated several times.
 
 Mosquitoes are equipped with several senses dedicated to track down blood: visual, chemical and heat sensors. The visual sensors consist of two compound eyes, which are separated from another~\cite{wiki_mosq}. With these eyes they can focus on objects that contrast with the background and especially on objects that move. Focusing on such objects yields a high probability for blood, because most likely they are alive~\cite{howstuff}. The chemical sensors represent their ability to scent. Especially carbon dioxide is identified by these sensors, because it is a result of breathing and therefore often leads to blood. Furthermore, the ability to detect heat supplements the arsenal mosquitoes have for tracking down blood.
 
 \subsection{Gamification}
-The user will steer the mosquito from first person view. His objective will be to find blood and food and to lay eggs. For finding food and eggs, he has to follow a trail of odors to the source.
+The user can control the mosquito from first person view. His objective will be finding blood and food and to lay eggs. For finding food and blood the user has to follow a trail of odors to the source.
 
-There will be something like a bar, displaying the amount of health (comes with food consumption) and blood the mosquito has. The activation of sensors, like heat detection, can depend on the amount of health currently available. The user will get more points the more he used senses and when he successfully sucked enough blood and reproduced, the game can start on the next level and be more difficult. This difficulty is, for example, represented by the counter-measures of hosts, e.g. there is the possibility that a human host will smash the mosquito, while it is trying to feed on his blood.
+There will be something like a bar, displaying the amount of health (comes with food consumption) and and a second one displaying the amount of blood the mosquito has. The activation of sensors, like heat detection, can depend on the amount of health currently available. The user will get more points the more he used senses and when he successfully sucked enough blood and reproduced, the game can start on the next level and be more difficult. This difficulty is, for example, represented by the counter-measures of hosts, e.g. there is the possibility that a human host will smash the mosquito, while it is trying to feed on his blood.
 
 \subsection{Complexity}
-As described earlier, a main objective will be to track down the source of scents, thereby arriving at a blood source. This makes it necessary to have a simple model, that controls the propagation of the gas (carbon dioxide) the host breathes out.
+As described earlier, a main objective is tracking down the source of scents, thereby arriving at a blood source. This makes it necessary to have a simple model, that controls the propagation of the gas (carbon dioxide) the host breathes out.
 
 Furthermore, the mosquito senses will be simulated. This means, after having done the appropriate research, finding a suitable representation of the environment. It should approach the mosquito perception as near as possible. There we must take into account the complexity as well as the effort necessary to implement it. Possible peculiarities of the mosquito's visual senses are for example: horizontal and vertical field of view, contrast and color perception, perception of shape. 
 
@@ -152,7 +152,7 @@ The user interface will be as simple as possible. Depending on the research we h
 \section{Concept user-experience}
 During the first usage of the simulator, pop-ups can be used to convey the necessary shortcuts for steering and the knowledge about the objectives and how to reach them. As already mentioned we want a simple user interface, with bars representing health and blood levels. If the mosquito dies, it is Game Over. If it succeeds in laying eggs, the next level starts, with the hosts being more aggressive and maybe a more difficult scent track. The starting points can be randomized.
 
-Furthermore, its possible to let the user switch between him steering the mosquito and sitting back while the computer does so. We therefore could use a random walk model which is biased to positions where the mosquito senses odors.
+Furthermore, it is possible to let the user switch between him controlling the mosquito and sitting back while the computer does the tracking itself. We therefore could use a random walk model which is biased to positions where the mosquito senses odors.
 
 We will decide on this after we have completed research and worked out the final concept.
 
