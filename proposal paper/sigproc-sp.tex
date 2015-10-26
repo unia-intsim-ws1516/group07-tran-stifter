@@ -138,19 +138,19 @@ There will be something like a bar, displaying the amount of health (comes with 
 \subsection{Complexity}
 As described earlier, a main objective will be to track down the source of scents, thereby arriving at a blood source. This makes it necessary to have a simple model, that controls the propagation of the gas (carbon dioxide) the host breathes out.
 
-Furthermore, the mosquito senses will be simulated. This means, after having done the appropriate research, finding a suitable representation of the environment. It should approach the mosquito perseption as near as possible. There we must take into account the complexity as well as the effort necessary to implement it. Possible peculiarities of the mosquito's visual senses are for example: horizontal and vertical field of view, contrast and color perception, perception of shape. 
+Furthermore, the mosquito senses will be simulated. This means, after having done the appropriate research, finding a suitable representation of the environment. It should approach the mosquito perception as near as possible. There we must take into account the complexity as well as the effort necessary to implement it. Possible peculiarities of the mosquito's visual senses are for example: horizontal and vertical field of view, contrast and color perception, perception of shape. 
 
 Representing heat sensors could be done by visualizing it. This seems reasonable, because people are used to such kind of heat representation via thermal imaging cameras in films.
 
 The remaining sense, sensing odors (chemical), is more subject to discussion. While it could also be represented by visual indicators (e.g. 'smelling clouds') this has two drawbacks: First, its rather boring, if every sense is mapped to visuals. Second, it would be necessary to only show this smelling cloud in the direct vicinity of the mosquito. Otherwise the relevance of tracking down the scent gets diminished. While this solution would be acceptible, we want to propose a different solution: mapping the smelling sense to a short sound. Depending on the density of the track we could vary the volume and frequency of the chosen sound. 
 
 \subsection{Aesthetics}
-The user interface will be as simple as possible.Depending on the research we have to do in regards to the visual senses, the environment could be very simple too. If we can abstract to a dark/light perceived environment, we could save a lot of effort creating the visual assets. If we show a rather 'normal' picture (normal relative to human perception), we most likely have to do a very narrowed, controlled environment, like only one or two rooms.
+The user interface will be as simple as possible. Depending on the research we have to do in regards to the visual senses, the environment could be very simple too. If we can abstract to a dark/light perceived environment, we could save a lot of effort creating the visual assets. In case we show a rather 'normal' picture (normal relative to human perception), we most likely have to do a very narrowed, controlled environment, like only one or two rooms.
 
 
 
 \section{Concept user-experience}
-During the first usage of the simulator, pop-ups can be used to convey the necessary shortcuts for steering and the knowledge about the objectives and how to reach them. As already mentioned we want a simple user interface, with bars representing health and blood levels. If the mosquito dies, it is Game Over. If it succeeds in laying eggs, the next level starts, with the hosts being more aggressive and maybe a more difficult scent track. 
+During the first usage of the simulator, pop-ups can be used to convey the necessary shortcuts for steering and the knowledge about the objectives and how to reach them. As already mentioned we want a simple user interface, with bars representing health and blood levels. If the mosquito dies, it is Game Over. If it succeeds in laying eggs, the next level starts, with the hosts being more aggressive and maybe a more difficult scent track. The starting points can be randomized.
 
 Furthermore, its possible to let the user switch between him steering the mosquito and sitting back while the computer does so. We therefore could use a random walk model which is biased to positions where the mosquito senses odors.
 
