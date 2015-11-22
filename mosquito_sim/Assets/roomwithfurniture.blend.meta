@@ -1,0 +1,208 @@
+fileFormatVersion: 2
+guid: 5ecd9add0e0c843c286eebf2e20998fd
+timeCreated: 1448209325
+licenseType: Free
+ModelImporter:
+  serializedVersion: 18
+  fileIDToRecycleName:
+    100000: arch
+    100002: Barcelona_Chair_ButtonsBack
+    100004: Barcelona_Chair_ButtonsBottom
+    100006: Barcelona_Chair_CushionBack
+    100008: Barcelona_Chair_CushionBottom
+    100010: Barcelona_Chair_Master
+    100012: Barcelona_Chair_MetalLegs
+    100014: Barcelona_Chair_Plastic
+    100016: Barcelona_Stool_Buttons
+    100018: Barcelona_Stool_Cushion
+    100020: Barcelona_Stool_Master
+    100022: Barcelona_Stool_MetalLegs
+    100024: Barcelona_Stool_Plastic
+    100026: base
+    100028: bulb
+    100030: Canvas_-_Heavy_Splat
+    100032: Cube
+    100034: head
+    100036: Japanese_Gigh_CT_Master
+    100038: JGCT_Glass
+    100040: JGCT_WoodA
+    100042: JGCT_WoodB
+    100044: JGCT_WoodC
+    100046: JGCT_WoodD
+    100048: knob
+    100050: pole
+    100052: roof
+    100054: roof_MeshPart0
+    100056: roof_MeshPart1
+    100058: //RootNode
+    400000: arch
+    400002: Barcelona_Chair_ButtonsBack
+    400004: Barcelona_Chair_ButtonsBottom
+    400006: Barcelona_Chair_CushionBack
+    400008: Barcelona_Chair_CushionBottom
+    400010: Barcelona_Chair_Master
+    400012: Barcelona_Chair_MetalLegs
+    400014: Barcelona_Chair_Plastic
+    400016: Barcelona_Stool_Buttons
+    400018: Barcelona_Stool_Cushion
+    400020: Barcelona_Stool_Master
+    400022: Barcelona_Stool_MetalLegs
+    400024: Barcelona_Stool_Plastic
+    400026: base
+    400028: bulb
+    400030: Canvas_-_Heavy_Splat
+    400032: Cube
+    400034: head
+    400036: Japanese_Gigh_CT_Master
+    400038: JGCT_Glass
+    400040: JGCT_WoodA
+    400042: JGCT_WoodB
+    400044: JGCT_WoodC
+    400046: JGCT_WoodD
+    400048: knob
+    400050: pole
+    400052: roof
+    400054: roof_MeshPart0
+    400056: roof_MeshPart1
+    400058: //RootNode
+    2300000: arch
+    2300002: Barcelona_Chair_ButtonsBack
+    2300004: Barcelona_Chair_ButtonsBottom
+    2300006: Barcelona_Chair_CushionBack
+    2300008: Barcelona_Chair_CushionBottom
+    2300010: Barcelona_Chair_MetalLegs
+    2300012: Barcelona_Chair_Plastic
+    2300014: Barcelona_Stool_Buttons
+    2300016: Barcelona_Stool_Cushion
+    2300018: Barcelona_Stool_MetalLegs
+    2300020: Barcelona_Stool_Plastic
+    2300022: base
+    2300024: bulb
+    2300026: Canvas_-_Heavy_Splat
+    2300028: Cube
+    2300030: head
+    2300032: JGCT_Glass
+    2300034: JGCT_WoodA
+    2300036: JGCT_WoodB
+    2300038: JGCT_WoodC
+    2300040: JGCT_WoodD
+    2300042: knob
+    2300044: pole
+    2300046: roof_MeshPart0
+    2300048: roof_MeshPart1
+    3300000: arch
+    3300002: Barcelona_Chair_ButtonsBack
+    3300004: Barcelona_Chair_ButtonsBottom
+    3300006: Barcelona_Chair_CushionBack
+    3300008: Barcelona_Chair_CushionBottom
+    3300010: Barcelona_Chair_MetalLegs
+    3300012: Barcelona_Chair_Plastic
+    3300014: Barcelona_Stool_Buttons
+    3300016: Barcelona_Stool_Cushion
+    3300018: Barcelona_Stool_MetalLegs
+    3300020: Barcelona_Stool_Plastic
+    3300022: base
+    3300024: bulb
+    3300026: Canvas_-_Heavy_Splat
+    3300028: Cube
+    3300030: head
+    3300032: JGCT_Glass
+    3300034: JGCT_WoodA
+    3300036: JGCT_WoodB
+    3300038: JGCT_WoodC
+    3300040: JGCT_WoodD
+    3300042: knob
+    3300044: pole
+    3300046: roof_MeshPart0
+    3300048: roof_MeshPart1
+    4300000: Cube
+    4300002: base
+    4300004: pole
+    4300006: knob
+    4300008: arch
+    4300010: roof_MeshPart0
+    4300012: roof_MeshPart1
+    4300014: head
+    4300016: bulb
+    4300018: Canvas_-_Heavy_Splat
+    4300020: Barcelona_Stool_Plastic
+    4300022: Barcelona_Stool_MetalLegs
+    4300024: Barcelona_Stool_Buttons
+    4300026: Barcelona_Stool_Cushion
+    4300028: Barcelona_Chair_Plastic
+    4300030: Barcelona_Chair_MetalLegs
+    4300032: Barcelona_Chair_CushionBottom
+    4300034: Barcelona_Chair_ButtonsBottom
+    4300036: Barcelona_Chair_ButtonsBack
+    4300038: Barcelona_Chair_CushionBack
+    4300040: JGCT_Glass
+    4300042: JGCT_WoodC
+    4300044: JGCT_WoodA
+    4300046: JGCT_WoodD
+    4300048: JGCT_WoodB
+    7400000: Default Take
+    9500000: //RootNode
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: .5
+    animationPositionError: .5
+    animationScaleError: .5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    splitTangentsAcrossUV: 1
+    normalImportMode: 0
+    tangentImportMode: 1
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: .5
+    foreArmTwist: .5
+    upperLegTwist: .5
+    legTwist: .5
+    armStretch: .0500000007
+    legStretch: .0500000007
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
