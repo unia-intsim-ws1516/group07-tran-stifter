@@ -1,0 +1,223 @@
+fileFormatVersion: 2
+guid: c1c0f0cfc66134628b3cea24c0e1d600
+timeCreated: 1448222673
+licenseType: Free
+ModelImporter:
+  serializedVersion: 18
+  fileIDToRecycleName:
+    100000: 2_0Text
+    100002: arch
+    100004: Barcelona_Chair_ButtonsBack
+    100006: Barcelona_Chair_ButtonsBottom
+    100008: Barcelona_Chair_CushionBack
+    100010: Barcelona_Chair_CushionBottom
+    100012: Barcelona_Chair_Master
+    100014: Barcelona_Chair_MetalLegs
+    100016: Barcelona_Chair_Plastic
+    100018: Barcelona_Stool_Buttons
+    100020: Barcelona_Stool_Cushion
+    100022: Barcelona_Stool_Master
+    100024: Barcelona_Stool_MetalLegs
+    100026: Barcelona_Stool_Plastic
+    100028: base
+    100030: bulb
+    100032: Canvas_-_Heavy_Splat
+    100034: Floor
+    100036: head
+    100038: Japanese_Gigh_CT_Master
+    100040: JGCT_Glass
+    100042: JGCT_WoodA
+    100044: JGCT_WoodB
+    100046: JGCT_WoodC
+    100048: JGCT_WoodD
+    100050: knob
+    100052: pole
+    100054: roof
+    100056: roof_MeshPart0
+    100058: roof_MeshPart1
+    100060: //RootNode
+    100062: Wall
+    100064: Window
+    400000: 2_0Text
+    400002: arch
+    400004: Barcelona_Chair_ButtonsBack
+    400006: Barcelona_Chair_ButtonsBottom
+    400008: Barcelona_Chair_CushionBack
+    400010: Barcelona_Chair_CushionBottom
+    400012: Barcelona_Chair_Master
+    400014: Barcelona_Chair_MetalLegs
+    400016: Barcelona_Chair_Plastic
+    400018: Barcelona_Stool_Buttons
+    400020: Barcelona_Stool_Cushion
+    400022: Barcelona_Stool_Master
+    400024: Barcelona_Stool_MetalLegs
+    400026: Barcelona_Stool_Plastic
+    400028: base
+    400030: bulb
+    400032: Canvas_-_Heavy_Splat
+    400034: Floor
+    400036: head
+    400038: Japanese_Gigh_CT_Master
+    400040: JGCT_Glass
+    400042: JGCT_WoodA
+    400044: JGCT_WoodB
+    400046: JGCT_WoodC
+    400048: JGCT_WoodD
+    400050: knob
+    400052: pole
+    400054: roof
+    400056: roof_MeshPart0
+    400058: roof_MeshPart1
+    400060: //RootNode
+    400062: Wall
+    400064: Window
+    2300000: 2_0Text
+    2300002: arch
+    2300004: Barcelona_Chair_ButtonsBack
+    2300006: Barcelona_Chair_ButtonsBottom
+    2300008: Barcelona_Chair_CushionBack
+    2300010: Barcelona_Chair_CushionBottom
+    2300012: Barcelona_Chair_MetalLegs
+    2300014: Barcelona_Chair_Plastic
+    2300016: Barcelona_Stool_Buttons
+    2300018: Barcelona_Stool_Cushion
+    2300020: Barcelona_Stool_MetalLegs
+    2300022: Barcelona_Stool_Plastic
+    2300024: base
+    2300026: bulb
+    2300028: Canvas_-_Heavy_Splat
+    2300030: Floor
+    2300032: head
+    2300034: JGCT_Glass
+    2300036: JGCT_WoodA
+    2300038: JGCT_WoodB
+    2300040: JGCT_WoodC
+    2300042: JGCT_WoodD
+    2300044: knob
+    2300046: pole
+    2300048: roof_MeshPart0
+    2300050: roof_MeshPart1
+    2300052: Wall
+    2300054: Window
+    3300000: 2_0Text
+    3300002: arch
+    3300004: Barcelona_Chair_ButtonsBack
+    3300006: Barcelona_Chair_ButtonsBottom
+    3300008: Barcelona_Chair_CushionBack
+    3300010: Barcelona_Chair_CushionBottom
+    3300012: Barcelona_Chair_MetalLegs
+    3300014: Barcelona_Chair_Plastic
+    3300016: Barcelona_Stool_Buttons
+    3300018: Barcelona_Stool_Cushion
+    3300020: Barcelona_Stool_MetalLegs
+    3300022: Barcelona_Stool_Plastic
+    3300024: base
+    3300026: bulb
+    3300028: Canvas_-_Heavy_Splat
+    3300030: Floor
+    3300032: head
+    3300034: JGCT_Glass
+    3300036: JGCT_WoodA
+    3300038: JGCT_WoodB
+    3300040: JGCT_WoodC
+    3300042: JGCT_WoodD
+    3300044: knob
+    3300046: pole
+    3300048: roof_MeshPart0
+    3300050: roof_MeshPart1
+    3300052: Wall
+    3300054: Window
+    4300000: 2_0Text
+    4300002: Window
+    4300004: Floor
+    4300006: Wall
+    4300008: base
+    4300010: pole
+    4300012: knob
+    4300014: arch
+    4300016: roof_MeshPart0
+    4300018: roof_MeshPart1
+    4300020: head
+    4300022: bulb
+    4300024: Canvas_-_Heavy_Splat
+    4300026: Barcelona_Stool_Plastic
+    4300028: Barcelona_Stool_MetalLegs
+    4300030: Barcelona_Stool_Buttons
+    4300032: Barcelona_Stool_Cushion
+    4300034: Barcelona_Chair_Plastic
+    4300036: Barcelona_Chair_MetalLegs
+    4300038: Barcelona_Chair_CushionBottom
+    4300040: Barcelona_Chair_ButtonsBottom
+    4300042: Barcelona_Chair_ButtonsBack
+    4300044: Barcelona_Chair_CushionBack
+    4300046: JGCT_Glass
+    4300048: JGCT_WoodC
+    4300050: JGCT_WoodA
+    4300052: JGCT_WoodD
+    4300054: JGCT_WoodB
+    7400000: Default Take
+    9500000: //RootNode
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: .5
+    animationPositionError: .5
+    animationScaleError: .5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    splitTangentsAcrossUV: 1
+    normalImportMode: 0
+    tangentImportMode: 1
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: .5
+    foreArmTwist: .5
+    upperLegTwist: .5
+    legTwist: .5
+    armStretch: .0500000007
+    legStretch: .0500000007
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

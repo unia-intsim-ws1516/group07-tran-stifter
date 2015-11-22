@@ -1,6 +1,6 @@
 fileFormatVersion: 2
 guid: 5ecd9add0e0c843c286eebf2e20998fd
-timeCreated: 1448209325
+timeCreated: 1448217436
 licenseType: Free
 ModelImporter:
   serializedVersion: 18
@@ -52,19 +52,24 @@ ModelImporter:
     400028: bulb
     400030: Canvas_-_Heavy_Splat
     400032: Cube
-    400034: head
-    400036: Japanese_Gigh_CT_Master
-    400038: JGCT_Glass
-    400040: JGCT_WoodA
-    400042: JGCT_WoodB
-    400044: JGCT_WoodC
-    400046: JGCT_WoodD
-    400048: knob
-    400050: pole
-    400052: roof
-    400054: roof_MeshPart0
-    400056: roof_MeshPart1
-    400058: //RootNode
+    400034: Cube_001
+    400036: head
+    400038: Japanese_Gigh_CT_Master
+    400040: JGCT_Glass
+    400042: JGCT_WoodA
+    400044: JGCT_WoodB
+    400046: JGCT_WoodC
+    400048: JGCT_WoodD
+    400050: knob
+    400052: pole
+    400054: roof
+    400056: roof_MeshPart0
+    400058: roof_MeshPart1
+    400060: //RootNode
+    400062: Window
+    400064: Room
+    400066: 2_0Text
+    400068: Wall
     2300000: arch
     2300002: Barcelona_Chair_ButtonsBack
     2300004: Barcelona_Chair_ButtonsBottom
@@ -80,16 +85,21 @@ ModelImporter:
     2300024: bulb
     2300026: Canvas_-_Heavy_Splat
     2300028: Cube
-    2300030: head
-    2300032: JGCT_Glass
-    2300034: JGCT_WoodA
-    2300036: JGCT_WoodB
-    2300038: JGCT_WoodC
-    2300040: JGCT_WoodD
-    2300042: knob
-    2300044: pole
-    2300046: roof_MeshPart0
-    2300048: roof_MeshPart1
+    2300030: Cube_001
+    2300032: head
+    2300034: JGCT_Glass
+    2300036: JGCT_WoodA
+    2300038: JGCT_WoodB
+    2300040: JGCT_WoodC
+    2300042: JGCT_WoodD
+    2300044: knob
+    2300046: pole
+    2300048: roof_MeshPart0
+    2300050: roof_MeshPart1
+    2300052: Window
+    2300054: Room
+    2300056: 2_0Text
+    2300058: Wall
     3300000: arch
     3300002: Barcelona_Chair_ButtonsBack
     3300004: Barcelona_Chair_ButtonsBottom
@@ -105,41 +115,51 @@ ModelImporter:
     3300024: bulb
     3300026: Canvas_-_Heavy_Splat
     3300028: Cube
-    3300030: head
-    3300032: JGCT_Glass
-    3300034: JGCT_WoodA
-    3300036: JGCT_WoodB
-    3300038: JGCT_WoodC
-    3300040: JGCT_WoodD
-    3300042: knob
-    3300044: pole
-    3300046: roof_MeshPart0
-    3300048: roof_MeshPart1
-    4300000: Cube
-    4300002: base
-    4300004: pole
-    4300006: knob
-    4300008: arch
-    4300010: roof_MeshPart0
-    4300012: roof_MeshPart1
-    4300014: head
-    4300016: bulb
-    4300018: Canvas_-_Heavy_Splat
-    4300020: Barcelona_Stool_Plastic
-    4300022: Barcelona_Stool_MetalLegs
-    4300024: Barcelona_Stool_Buttons
-    4300026: Barcelona_Stool_Cushion
-    4300028: Barcelona_Chair_Plastic
-    4300030: Barcelona_Chair_MetalLegs
-    4300032: Barcelona_Chair_CushionBottom
-    4300034: Barcelona_Chair_ButtonsBottom
-    4300036: Barcelona_Chair_ButtonsBack
-    4300038: Barcelona_Chair_CushionBack
-    4300040: JGCT_Glass
-    4300042: JGCT_WoodC
-    4300044: JGCT_WoodA
-    4300046: JGCT_WoodD
-    4300048: JGCT_WoodB
+    3300030: Cube_001
+    3300032: head
+    3300034: JGCT_Glass
+    3300036: JGCT_WoodA
+    3300038: JGCT_WoodB
+    3300040: JGCT_WoodC
+    3300042: JGCT_WoodD
+    3300044: knob
+    3300046: pole
+    3300048: roof_MeshPart0
+    3300050: roof_MeshPart1
+    3300052: Window
+    3300054: Room
+    3300056: 2_0Text
+    3300058: Wall
+    4300000: Window
+    4300002: Cube_001
+    4300004: Cube
+    4300006: base
+    4300008: pole
+    4300010: knob
+    4300012: arch
+    4300014: roof_MeshPart0
+    4300016: roof_MeshPart1
+    4300018: head
+    4300020: bulb
+    4300022: Canvas_-_Heavy_Splat
+    4300024: Barcelona_Stool_Plastic
+    4300026: Barcelona_Stool_MetalLegs
+    4300028: Barcelona_Stool_Buttons
+    4300030: Barcelona_Stool_Cushion
+    4300032: Barcelona_Chair_Plastic
+    4300034: Barcelona_Chair_MetalLegs
+    4300036: Barcelona_Chair_CushionBottom
+    4300038: Barcelona_Chair_ButtonsBottom
+    4300040: Barcelona_Chair_ButtonsBack
+    4300042: Barcelona_Chair_CushionBack
+    4300044: JGCT_Glass
+    4300046: JGCT_WoodC
+    4300048: JGCT_WoodA
+    4300050: JGCT_WoodD
+    4300052: JGCT_WoodB
+    4300054: Room
+    4300056: 2_0Text
+    4300058: Wall
     7400000: Default Take
     9500000: //RootNode
   materials:
