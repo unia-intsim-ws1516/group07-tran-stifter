@@ -10,9 +10,10 @@ public class EnablePPFilters : MonoBehaviour {
     private bool colorState = false;
     private bool blurSoftState = false;
     private bool blurHardState = false;
+    private bool fogState = false;
 
-	// Use this for initialization
-	void Start () {
+    // Use this for initialization
+    void Start () {
 	
 	}
 	
@@ -49,6 +50,11 @@ public class EnablePPFilters : MonoBehaviour {
             }
 
             blurHardState = !blurHardState;
+        }
+        else if (Input.GetKeyDown(KeyCode.F5))
+        {
+            RenderSettings.fog = !fogState;
+            fogState = !fogState;
         }
     }
 }
