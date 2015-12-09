@@ -365,3 +365,7 @@ Cmd: compileSnippet
   api=4 type=0 insize=1127 outsize=1908 kw= pd= ok=1
 Cmd: compileSnippet
   api=4 type=1 insize=1127 outsize=518 kw= pd= ok=1
+Cmd: compileSnippet
+  api=4 type=0 insize=1127 outsize=2200 kw=FOG_EXP2 pd= ok=1
+Cmd: compileSnippet
+  api=4 type=1 insize=1127 outsize=851 kw=FOG_EXP2 pd= ok=1
