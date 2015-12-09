@@ -17,6 +17,7 @@ namespace UnityStandardAssets.ImageEffects
             TriangleLuminance = 4,
         }
 
+        private int temp = 0;
 
         public EdgeDetectMode mode = EdgeDetectMode.SobelDepthThin;
         public float sensitivityDepth = 1.0f;
@@ -67,23 +68,30 @@ namespace UnityStandardAssets.ImageEffects
         }
 
         [ImageEffectOpaque]
-        void OnRenderImage (RenderTexture source, RenderTexture destination)
-		{
-            if (CheckResources () == false)
-			{
-                Graphics.Blit (source, destination);
-                return;
+        void OnRenderImage(RenderTexture source, RenderTexture destination)
+        {
+            
+            if (temp % 30 == 0)
+            {
+                if (CheckResources() == false)
+                {
+                    Graphics.Blit(source, destination);
+                    return;
+                }
+
+                Vector2 sensitivity = new Vector2(sensitivityDepth, sensitivityNormals);
+                edgeDetectMaterial.SetVector("_Sensitivity", new Vector4(sensitivity.x, sensitivity.y, 1.0f, sensitivity.y));
+                edgeDetectMaterial.SetFloat("_BgFade", edgesOnly);
+                edgeDetectMaterial.SetFloat("_SampleDistance", sampleDist);
+                edgeDetectMaterial.SetVector("_BgColor", edgesOnlyBgColor);
+                edgeDetectMaterial.SetFloat("_Exponent", edgeExp);
+                edgeDetectMaterial.SetFloat("_Threshold", lumThreshold);
+
+                Graphics.Blit(source, destination, edgeDetectMaterial, (int)mode);
             }
-
-            Vector2 sensitivity = new Vector2 (sensitivityDepth, sensitivityNormals);
-            edgeDetectMaterial.SetVector ("_Sensitivity", new Vector4 (sensitivity.x, sensitivity.y, 1.0f, sensitivity.y));
-            edgeDetectMaterial.SetFloat ("_BgFade", edgesOnly);
-            edgeDetectMaterial.SetFloat ("_SampleDistance", sampleDist);
-            edgeDetectMaterial.SetVector ("_BgColor", edgesOnlyBgColor);
-            edgeDetectMaterial.SetFloat ("_Exponent", edgeExp);
-            edgeDetectMaterial.SetFloat ("_Threshold", lumThreshold);
-
-            Graphics.Blit (source, destination, edgeDetectMaterial, (int) mode);
+            temp++;
+        
         }
+
     }
 }

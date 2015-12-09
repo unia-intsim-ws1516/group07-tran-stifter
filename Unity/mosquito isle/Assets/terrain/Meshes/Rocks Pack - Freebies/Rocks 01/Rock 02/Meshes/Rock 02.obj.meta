@@ -3,6 +3,8 @@ guid: db72b16ba1901ab4eacf5734b76354fe
 labels:
 - Terrain
 - Prop
+timeCreated: 1449654240
+licenseType: Free
 ModelImporter:
   serializedVersion: 18
   fileIDToRecycleName:
