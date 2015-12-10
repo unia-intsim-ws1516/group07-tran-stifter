@@ -61,28 +61,28 @@ namespace UnityStandardAssets.ImageEffects
             // downsample
             RenderTexture rt = RenderTexture.GetTemporary (rtW, rtH, 0, source.format);
 
-            rt.filterMode = FilterMode.Point;
+            rt.filterMode = FilterMode.Bilinear;
             Graphics.Blit (source, rt, blurMaterial, 0);
 
             var passOffs= blurType == BlurType.StandardGauss ? 0 : 2;
 
             for(int i = 0; i < blurIterations; i++) {
-                //float iterationOffs = (i * 1.0f);
-                //blurMaterial.SetVector("_Parameter", new Vector4(blurSize * widthMod + iterationOffs, -blurSize * widthMod - iterationOffs, 0.0f, 0.0f));
+                float iterationOffs = (i * 1.0f);
+                blurMaterial.SetVector("_Parameter", new Vector4(blurSize * widthMod + iterationOffs, -blurSize * widthMod - iterationOffs, 0.0f, 0.0f));
 
-                //// vertical blur
-                //RenderTexture rt2 = RenderTexture.GetTemporary(rtW, rtH, 0, source.format);
-                //rt2.filterMode = FilterMode.Bilinear;
-                //Graphics.Blit(rt, rt2, blurMaterial, 1 + passOffs);
-                //RenderTexture.ReleaseTemporary(rt);
-                //rt = rt2;
+                // vertical blur
+                RenderTexture rt2 = RenderTexture.GetTemporary(rtW, rtH, 0, source.format);
+                rt2.filterMode = FilterMode.Bilinear;
+                Graphics.Blit(rt, rt2, blurMaterial, 1 + passOffs);
+                RenderTexture.ReleaseTemporary(rt);
+                rt = rt2;
 
-                //// horizontal blur
-                //rt2 = RenderTexture.GetTemporary(rtW, rtH, 0, source.format);
-                //rt2.filterMode = FilterMode.Bilinear;
-                //Graphics.Blit(rt, rt2, blurMaterial, 2 + passOffs);
-                //RenderTexture.ReleaseTemporary(rt);
-                //rt = rt2;
+                // horizontal blur
+                rt2 = RenderTexture.GetTemporary(rtW, rtH, 0, source.format);
+                rt2.filterMode = FilterMode.Bilinear;
+                Graphics.Blit(rt, rt2, blurMaterial, 2 + passOffs);
+                RenderTexture.ReleaseTemporary(rt);
+                rt = rt2;
             }
 
             Graphics.Blit (rt, destination);

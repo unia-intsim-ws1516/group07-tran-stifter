@@ -8,7 +8,7 @@ public class EnablePPFilters : MonoBehaviour {
     public float blurHardValue = 7.5f;
 
     private bool colorState = false;
-    private bool blurSoftState = false;
+    private bool downsampling = false;
     private bool blurHardState = false;
     private bool fogState = false;
 
@@ -27,27 +27,15 @@ public class EnablePPFilters : MonoBehaviour {
         }
         else if (Input.GetKeyDown(KeyCode.F3))
         {
-            BlurOptimized blurComp = gameObject.GetComponent<BlurOptimized>();
-            blurComp.enabled = !blurSoftState;
-            blurComp.blurSize = blurSoftValue;
-
-            if (blurHardState == true)
-            {
-                blurHardState = false;
-            }
-
-            blurSoftState = !blurSoftState;
+            Downsampling downComp = gameObject.GetComponent<Downsampling>();
+            downComp.enabled = !downsampling;
+            downsampling = !downsampling;
         }
         else if (Input.GetKeyDown(KeyCode.F4))
         {
             BlurOptimized blurComp = gameObject.GetComponent<BlurOptimized>();
             blurComp.enabled = !blurHardState;
             blurComp.blurSize = blurHardValue;
-
-            if(blurSoftState == true)
-            {
-                blurSoftState = false;
-            }
 
             blurHardState = !blurHardState;
         }
