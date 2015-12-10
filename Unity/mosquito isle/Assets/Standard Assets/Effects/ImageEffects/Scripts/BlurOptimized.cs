@@ -61,7 +61,7 @@ namespace UnityStandardAssets.ImageEffects
             // downsample
             RenderTexture rt = RenderTexture.GetTemporary (rtW, rtH, 0, source.format);
 
-            rt.filterMode = FilterMode.Bilinear;
+            rt.filterMode = FilterMode.Point;
             Graphics.Blit (source, rt, blurMaterial, 0);
 
             var passOffs= blurType == BlurType.StandardGauss ? 0 : 2;
