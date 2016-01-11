@@ -1,0 +1,83 @@
+Initialize engine version: 5.2.3f1 (f3d16a1fa2dd)
+GfxDevice: creating device client; threaded=1
+Direct3D:
+    Version:  Direct3D 11.0 [level 11.0]
+    Renderer: NVIDIA GeForce GT 630  (ID=0xfc2)
+    Vendor:   NVIDIA
+    VRAM:     1994 MB
+Begin MonoManager ReloadAssembly
+Platform assembly: C:\Users\stiftech.UNI-AUGSBURG\Desktop\intsim_git\Unity\mosquito isle\mosquito_isle_dev_test_Data\Managed\UnityEngine.dll (this message is harmless)
+Loading C:\Users\stiftech.UNI-AUGSBURG\Desktop\intsim_git\Unity\mosquito isle\mosquito_isle_dev_test_Data\Managed\UnityEngine.dll into Unity Child Domain
+Platform assembly: C:\Users\stiftech.UNI-AUGSBURG\Desktop\intsim_git\Unity\mosquito isle\mosquito_isle_dev_test_Data\Managed\Assembly-CSharp-firstpass.dll (this message is harmless)
+Loading C:\Users\stiftech.UNI-AUGSBURG\Desktop\intsim_git\Unity\mosquito isle\mosquito_isle_dev_test_Data\Managed\Assembly-CSharp-firstpass.dll into Unity Child Domain
+Platform assembly: C:\Users\stiftech.UNI-AUGSBURG\Desktop\intsim_git\Unity\mosquito isle\mosquito_isle_dev_test_Data\Managed\Assembly-CSharp.dll (this message is harmless)
+Loading C:\Users\stiftech.UNI-AUGSBURG\Desktop\intsim_git\Unity\mosquito isle\mosquito_isle_dev_test_Data\Managed\Assembly-CSharp.dll into Unity Child Domain
+Platform assembly: C:\Users\stiftech.UNI-AUGSBURG\Desktop\intsim_git\Unity\mosquito isle\mosquito_isle_dev_test_Data\Managed\Assembly-UnityScript.dll (this message is harmless)
+Loading C:\Users\stiftech.UNI-AUGSBURG\Desktop\intsim_git\Unity\mosquito isle\mosquito_isle_dev_test_Data\Managed\Assembly-UnityScript.dll into Unity Child Domain
+Platform assembly: C:\Users\stiftech.UNI-AUGSBURG\Desktop\intsim_git\Unity\mosquito isle\mosquito_isle_dev_test_Data\Managed\UnityEngine.UI.dll (this message is harmless)
+Loading C:\Users\stiftech.UNI-AUGSBURG\Desktop\intsim_git\Unity\mosquito isle\mosquito_isle_dev_test_Data\Managed\UnityEngine.UI.dll into Unity Child Domain
+Platform assembly: C:\Users\stiftech.UNI-AUGSBURG\Desktop\intsim_git\Unity\mosquito isle\mosquito_isle_dev_test_Data\Managed\UnityEngine.Networking.dll (this message is harmless)
+Loading C:\Users\stiftech.UNI-AUGSBURG\Desktop\intsim_git\Unity\mosquito isle\mosquito_isle_dev_test_Data\Managed\UnityEngine.Networking.dll into Unity Child Domain
+Platform assembly: C:\Users\stiftech.UNI-AUGSBURG\Desktop\intsim_git\Unity\mosquito isle\mosquito_isle_dev_test_Data\Managed\DOTween.dll (this message is harmless)
+Loading C:\Users\stiftech.UNI-AUGSBURG\Desktop\intsim_git\Unity\mosquito isle\mosquito_isle_dev_test_Data\Managed\DOTween.dll into Unity Child Domain
+Platform assembly: C:\Users\stiftech.UNI-AUGSBURG\Desktop\intsim_git\Unity\mosquito isle\mosquito_isle_dev_test_Data\Managed\DOTween43.dll (this message is harmless)
+Loading C:\Users\stiftech.UNI-AUGSBURG\Desktop\intsim_git\Unity\mosquito isle\mosquito_isle_dev_test_Data\Managed\DOTween43.dll into Unity Child Domain
+Platform assembly: C:\Users\stiftech.UNI-AUGSBURG\Desktop\intsim_git\Unity\mosquito isle\mosquito_isle_dev_test_Data\Managed\DOTween46.dll (this message is harmless)
+Loading C:\Users\stiftech.UNI-AUGSBURG\Desktop\intsim_git\Unity\mosquito isle\mosquito_isle_dev_test_Data\Managed\DOTween46.dll into Unity Child Domain
+Platform assembly: C:\Users\stiftech.UNI-AUGSBURG\Desktop\intsim_git\Unity\mosquito isle\mosquito_isle_dev_test_Data\Managed\DOTween50.dll (this message is harmless)
+Loading C:\Users\stiftech.UNI-AUGSBURG\Desktop\intsim_git\Unity\mosquito isle\mosquito_isle_dev_test_Data\Managed\DOTween50.dll into Unity Child Domain
+Platform assembly: C:\Users\stiftech.UNI-AUGSBURG\Desktop\intsim_git\Unity\mosquito isle\mosquito_isle_dev_test_Data\Managed\System.Core.dll (this message is harmless)
+- Completed reload, in  0.321 seconds
+desktop: 1920x1080 59Hz; virtual: 1920x1080 at 0,0
+<RI> Initializing input.
+XInput1_3.dll not found. Trying XInput9_1_0.dll instead...
+<RI> Input initialized.
+<RI> Initialized touch support.
+Platform assembly: C:\Users\stiftech.UNI-AUGSBURG\Desktop\intsim_git\Unity\mosquito isle\mosquito_isle_dev_test_Data\Managed\System.dll (this message is harmless)
+The tree Fern must use the Nature/Soft Occlusion shader. Otherwise billboarding/lighting will not work correctly.
+ 
+(Filename:  Line: 133)
+
+The tree Bush2 must use the Nature/Soft Occlusion shader. Otherwise billboarding/lighting will not work correctly.
+ 
+(Filename:  Line: 133)
+
+The tree Big sharp leafs prefab must use the Nature/Soft Occlusion shader. Otherwise billboarding/lighting will not work correctly.
+ 
+(Filename:  Line: 133)
+
+The tree Bush7 must use the Nature/Soft Occlusion shader. Otherwise billboarding/lighting will not work correctly.
+ 
+(Filename:  Line: 133)
+
+The tree Bush 01 triple prefab must use the Nature/Soft Occlusion shader. Otherwise billboarding/lighting will not work correctly.
+ 
+(Filename:  Line: 133)
+
+The tree Grass1Leaves must use the Nature/Soft Occlusion shader. Otherwise billboarding/lighting will not work correctly.
+ 
+(Filename:  Line: 133)
+
+The tree Grass 06 triple prefab must use the Nature/Soft Occlusion shader. Otherwise billboarding/lighting will not work correctly.
+ 
+(Filename:  Line: 133)
+
+The tree Grass 01 triple prefab must use the Nature/Soft Occlusion shader. Otherwise billboarding/lighting will not work correctly.
+ 
+(Filename:  Line: 133)
+
+TerrainCollider: MeshCollider is not supported on terrain at the moment.
+ 
+(Filename:  Line: 183)
+
+Mosquito
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 64)
+
+5
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 64)
+
+Setting up 2 worker threads for Enlighten.
+  Thread -> id: 1ba8 -> priority: 1 
+  Thread -> id: 1238 -> priority: 1 
