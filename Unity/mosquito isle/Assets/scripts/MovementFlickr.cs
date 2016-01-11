@@ -10,8 +10,16 @@ public class MovementFlickr : MonoBehaviour {
     private Shader shader1;
     private Shader shader2;
 
-	// Use this for initialization
-	void Start () {
+    public EnableHeat heatScript;
+    private int distanceToAnimalInFlickr;
+    private GameObject playerTag;
+
+    // Use this for initialization
+    void Start () {
+        playerTag = GameObject.FindWithTag("Player");
+
+        distanceToAnimalInFlickr = heatScript.getDistanceToAnimal();
+        
         rend = GetComponent<SkinnedMeshRenderer>();
         shader1 = Shader.Find("Custom/ToonOutlineAdjusted");
         shader2 = Shader.Find("Toon/Basic");
@@ -19,18 +27,22 @@ public class MovementFlickr : MonoBehaviour {
 	
 	// Update is called once per frame
     void Update () {
-        if (counter % step == 0)
+        if( calculateDistance( playerTag, this.gameObject ) > distanceToAnimalInFlickr )
         {
-            rend.material.shader = shader1;
-        }
-        else if (counter % step == (int)(step / 2))
-        {
-            rend.material.shader = shader2;
-        }
-        //if (counter == 120)
-        //{
-        //    rend.material.shader = shader2;
-        //}
-        counter++;
+            if (counter % step == 0)
+            {
+                rend.material.shader = shader1;
+            }
+            else if (counter % step == (int)(step / 2))
+            {
+                rend.material.shader = shader2;
+            }
+            counter++;
+        }        
 	}
+
+    private float calculateDistance(GameObject player, GameObject animal)
+    {
+        return Vector3.Distance(player.transform.position, animal.transform.position);
+    }
 }

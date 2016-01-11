@@ -28,6 +28,11 @@ public class EnableHeat : MonoBehaviour {
         //rend.material.shader = shader2;
     }
 
+    public int getDistanceToAnimal()
+    {
+        return distanceToAnimal;
+    }
+
     private float calculateDistance(GameObject player, GameObject animal)
     {        
         return Vector3.Distance(player.transform.position, animal.transform.position);
@@ -38,8 +43,8 @@ public class EnableHeat : MonoBehaviour {
         foreach ( GameObject obj in gorillasMoving )
         {
             rend = obj.GetComponent<SkinnedMeshRenderer>();
-            rend.material.shader = shader2;
-            rend.material.SetColor("_Color", Color.white );
+            //rend.material.shader = shader2;
+            //rend.material.SetColor("_Color", Color.white );
             if( calculateDistance( playerTag, obj) <= distanceToAnimal )
             {
                 rend.material.shader = shader1;
