@@ -20,50 +20,75 @@ public class EnablePPFilters : MonoBehaviour {
 
     // Use this for initialization
     void Start () {
-        tagCameraWithoutBreath = GameObject.FindWithTag("WithoutBreath");
+        tagCameraWithoutBreath = GameObject.FindWithTag("MainCamera");
         //Debug.Log(tagCameraWithoutBreath.CompareTag("WithoutBreath"));
     }
 	
+    public void toggleFarClipPlane()
+    {
+        Camera cameraWithoutBreath = tagCameraWithoutBreath.GetComponent<Camera>();
+        if (cameraWithoutBreath.farClipPlane == farClipPlaneMin)
+        {
+            cameraWithoutBreath.farClipPlane = farClipPlaneMax;
+        }
+        else
+        {
+            cameraWithoutBreath.farClipPlane = farClipPlaneMin;
+        }
+    }
+
+    public void toggleColors()
+    {
+        tagCameraWithoutBreath.GetComponent<ColorCorrectionCurves>().enabled = !colorState;
+        colorState = !colorState;
+    }
+    //aufräumen
+    public void setHighResolution()
+    {
+        Downsampling downComp = tagCameraWithoutBreath.GetComponent<Downsampling>();
+        downComp.lowResolution = false;
+        downComp.enabled = !downsamplingLow;
+        downsamplingLow = !downsamplingLow;
+        downsamplingHigh = false;
+    }
+
+    public void toggleLowResolution()
+    {
+        Downsampling downComp = tagCameraWithoutBreath.GetComponent<Downsampling>();
+        downComp.lowResolution = true;
+        downComp.enabled = !downsamplingHigh;
+        downsamplingHigh = !downsamplingHigh;
+        downsamplingLow = false;
+    }
+
+    
+
 	// Update is called once per frame
 	void Update () {
 
         if( Input.GetKeyDown(KeyCode.F1))
         {
-            Camera cameraWithoutBreath = tagCameraWithoutBreath.GetComponent<Camera>();
-            if(cameraWithoutBreath.farClipPlane == farClipPlaneMin)
-            {
-                cameraWithoutBreath.farClipPlane = farClipPlaneMax;
-            }
-            else
-            {
-                cameraWithoutBreath.farClipPlane = farClipPlaneMin;
-            }
+            toggleFarClipPlane();
         }
 	    else if (Input.GetKeyDown(KeyCode.F2))
         {
-            tagCameraWithoutBreath.GetComponent<ColorCorrectionCurves>().enabled = !colorState;
-            colorState = !colorState;        
+            toggleColors();
         }
         else if (Input.GetKeyDown(KeyCode.F3))
         {
-            Downsampling downComp = tagCameraWithoutBreath.GetComponent<Downsampling>();
-            downComp.lowResolution = false;
-            downComp.enabled = !downsamplingLow;
-            downsamplingLow = !downsamplingLow;
-            downsamplingHigh = false;
+            if( downsamplingHigh == true )
+            {
+                setHighResolution( false );
+            }
         }
         else if (Input.GetKeyDown(KeyCode.F4))
         {
-            Downsampling downComp = tagCameraWithoutBreath.GetComponent<Downsampling>();
-            downComp.lowResolution = true;
-            downComp.enabled = !downsamplingHigh;
-            downsamplingHigh = !downsamplingHigh;
-            downsamplingLow = false;
+            toggleLowResolution();
         }
-        else if (Input.GetKeyDown(KeyCode.F5))
-        {
-            RenderSettings.fog = !fogState;
-            fogState = !fogState;
-        }
+        //else if (Input.GetKeyDown(KeyCode.F5))
+        //{
+        //    RenderSettings.fog = !fogState;
+        //    fogState = !fogState;
+        //}
     }
 }

@@ -6,6 +6,7 @@ public class GameController : MonoBehaviour {
     private GameObject guiMenu;
     private Camera camWithoutBreath;
     public MosquitoMovement mosqMovement;
+    private EnablePPFilters filters;
 
     private bool menuActive = true;
     private int currentMask=0;
@@ -24,7 +25,24 @@ public class GameController : MonoBehaviour {
 
         guiMenu.SetActive(true);
         mosqMovement.enabled = false;
+
+        filters = GameObject.FindObjectOfType<EnablePPFilters>();
 	}
+
+    public void StartGame()
+    {
+        menuActive = false;
+        guiMenu.SetActive(false);
+        mosqMovement.enabled = true;
+
+        camWithoutBreath.cullingMask = (1 << LayerMask.NameToLayer("Default") | 1 << LayerMask.NameToLayer("TransparentFX") |
+                    1 << LayerMask.NameToLayer("IgnoreRaycast") | 1 << LayerMask.NameToLayer("Water") | 1 << LayerMask.NameToLayer("UI") |
+                    1 << LayerMask.NameToLayer("basic") | 1 << LayerMask.NameToLayer("with breath") );
+
+        // toggle doesnt work, use t/f
+        filters.toggleFarClipPlane();
+        filters.toggleHighResolution();
+    }
 	
 	// Update is called once per frame
 	void Update () {
