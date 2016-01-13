@@ -35,6 +35,7 @@ public class GameController : MonoBehaviour {
 
     void Start()
     {
+        // Time.timeScale = 0.0; USE THIS INSTEAD OF DIFFERENT SCENES
         Debug.Log(Application.loadedLevel);
         if (Application.loadedLevel == 0)
         {
