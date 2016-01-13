@@ -14,7 +14,7 @@ namespace UnityStandardAssets.ImageEffects
         //[Range(0, 10)]
         private float downsampleY = 1;
 
-        // low resolution at 594 ommatidia, high resolution at 858 (paper said: 600 to 900)
+        // low resolution at 594 ommatidia, high resolution at 858 (paper said: 600 to 900). True for 1 compound eye. Yet, we only use 90 FOV so it's ok.
         private const int targetWidthLow = 33;
         private const int targetHeightLow = 18;
         private const int targetWidthHigh = 39;

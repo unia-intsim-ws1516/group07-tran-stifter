@@ -12,6 +12,7 @@ public class StartGame : MonoBehaviour {
 	
 	// Update is called once per frame
 	public void LoadGame () {
+        //Application.LoadLevel(0);
         gameControllerInstance.StartGame();
 	}
 }

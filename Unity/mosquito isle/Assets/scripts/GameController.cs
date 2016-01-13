@@ -9,60 +9,82 @@ public class GameController : MonoBehaviour {
     private EnablePPFilters filters;
 
     private bool menuActive = true;
-    private int currentMask=0;
+    private bool firstStart = true;
 
+    private void setCullingMaskAll()
+    {
+        camWithoutBreath.cullingMask = (1 << LayerMask.NameToLayer("Default") | 1 << LayerMask.NameToLayer("TransparentFX") |
+                    1 << LayerMask.NameToLayer("IgnoreRaycast") | 1 << LayerMask.NameToLayer("Water") | 1 << LayerMask.NameToLayer("UI") |
+                    1 << LayerMask.NameToLayer("basic") | 1 << LayerMask.NameToLayer("with breath"));
+    }
+
+    private void setCullingMaskRestricted()
+    {
+        camWithoutBreath.cullingMask = (1 << LayerMask.NameToLayer("Default") | 1 << LayerMask.NameToLayer("TransparentFX") |
+                    1 << LayerMask.NameToLayer("IgnoreRaycast") | 1 << LayerMask.NameToLayer("Water") | 1 << LayerMask.NameToLayer("UI") |
+                    1 << LayerMask.NameToLayer("basic"));
+    }
 
 	// Use this for initialization
 	void Awake () {
         Debug.Log("gc");
         guiMenu = GameObject.FindWithTag("GUIMenu");
         camWithoutBreath = Camera.main;
-
-        currentMask = camWithoutBreath.cullingMask;
-        camWithoutBreath.cullingMask = (1 << LayerMask.NameToLayer("Default") | 1 << LayerMask.NameToLayer("TransparentFX") |
-                    1 << LayerMask.NameToLayer("IgnoreRaycast") | 1 << LayerMask.NameToLayer("Water") | 1 << LayerMask.NameToLayer("UI") |
-                    1 << LayerMask.NameToLayer("basic"));
-
-        guiMenu.SetActive(true);
-        mosqMovement.enabled = false;
-
         filters = GameObject.FindObjectOfType<EnablePPFilters>();
-	}
+    }
+
+    void Start()
+    {
+        Debug.Log(Application.loadedLevel);
+        if (Application.loadedLevel == 0)
+        {
+            guiMenu.SetActive(true);
+            mosqMovement.enabled = false;
+            setCullingMaskRestricted();
+            firstStart = false;
+        }
+        else
+        {
+            menuActive = false;
+            guiMenu.SetActive(false);
+            mosqMovement.enabled = true;
+
+            filters.toggleFarClipPlane();
+            filters.setHighResolution(true);
+            filters.enableDownsampling(true, false);
+            setCullingMaskAll();
+        }
+    }
 
     public void StartGame()
     {
-        menuActive = false;
-        guiMenu.SetActive(false);
-        mosqMovement.enabled = true;
+        Application.LoadLevel(1);
+        //menuActive = false;
+        //guiMenu.SetActive(false);
+        //mosqMovement.enabled = true;
 
-        camWithoutBreath.cullingMask = (1 << LayerMask.NameToLayer("Default") | 1 << LayerMask.NameToLayer("TransparentFX") |
-                    1 << LayerMask.NameToLayer("IgnoreRaycast") | 1 << LayerMask.NameToLayer("Water") | 1 << LayerMask.NameToLayer("UI") |
-                    1 << LayerMask.NameToLayer("basic") | 1 << LayerMask.NameToLayer("with breath") );
-
-        // toggle doesnt work, use t/f
-        filters.toggleFarClipPlane();
-        filters.toggleHighResolution();
+        //filters.toggleFarClipPlane();
+        //filters.setHighResolution( true );
+        //filters.enableDownsampling(true, false);
+        //setCullingMaskAll();
     }
 	
 	// Update is called once per frame
 	void Update () {
-        //Debug.Log("gc_update");
+        Debug.Log("gc_update");
         if( Input.GetKeyDown(KeyCode.Escape) )
         {
             if( menuActive == false )
             {
                 guiMenu.SetActive(true);
                 mosqMovement.enabled = false;
-                currentMask = camWithoutBreath.cullingMask;
-                camWithoutBreath.cullingMask = (1 << LayerMask.NameToLayer("Default") | 1 << LayerMask.NameToLayer("TransparentFX") | 
-                    1 << LayerMask.NameToLayer("IgnoreRaycast") | 1 << LayerMask.NameToLayer("Water") | 1 << LayerMask.NameToLayer("UI") | 
-                    1 << LayerMask.NameToLayer("basic"));
+                setCullingMaskRestricted();
             }
             else
             {
                 guiMenu.SetActive(false);
                 mosqMovement.enabled = true;
-                camWithoutBreath.cullingMask = currentMask;
+                setCullingMaskAll();
             }
             menuActive = !menuActive;
         }
