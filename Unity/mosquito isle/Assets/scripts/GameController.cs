@@ -59,7 +59,7 @@ public class GameController : MonoBehaviour {
 
     public void StartGame()
     {
-        Application.LoadLevel(1);
+        Application.LoadLevel(0);
         //menuActive = false;
         //guiMenu.SetActive(false);
         //mosqMovement.enabled = true;
