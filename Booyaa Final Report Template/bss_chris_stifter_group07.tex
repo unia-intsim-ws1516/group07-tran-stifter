@@ -147,9 +147,9 @@ Mosquitoes are one of the deadliest (and most annoying) animal families in the w
 
 \begin{figure*}[bth!]
  %   \centering
-\subfloat[The island from above.]{\includegraphics[width=0.5\textwidth, height=5.1cm]{Figures/island_topview.png}
+\subfloat[The island from above. Its size is approximately 4 km$^2$.]{\includegraphics[width=0.5\textwidth, height=5.0cm]{Figures/island_topview.png}
 \label{fig:islandabove}}
-\subfloat[Zoomed in view on arbitrary part of the island.]{\includegraphics[width=0.5\textwidth, height=5.1cm]{Figures/island.png}
+\subfloat[Zoomed in view on arbitrary part of the island.]{\includegraphics[width=0.5\textwidth, height=5.0cm]{Figures/island.png}
 	\label{fig:island}}
 
 \caption{The tropical island which serves as the simulation world. It consists of a rudimentary vegetation (mainly palms and banana trees), some solid objects (e.g. huts), and some animals.}
@@ -157,13 +157,17 @@ Mosquitoes are one of the deadliest (and most annoying) animal families in the w
 \end{figure*}
 
 \section{Introduction}
-The word ``mosquito'' is Spanish for ``little fly''\cite{howstuff}. There have been over 2.700 species identified and described. Their distribution area is comprising almost the whole world (with the exception of Antarctica and some polar and sub-polar regions). The females of some species feed on blood. This is necessary for them to attain the ability lay eggs, because they need the proteins for their eggs. In passing from host to host it is possible for some species to transmit infectious, deadly diseases (e.g. malaria, yellow fever, dengue fever), if the mosquito bites a host. This means that additionally to the annoyance a mosquito represents, a real danger is added. In light of this, research on the behaviour of mosquitoes when hunting, on their reaction to environmental stimuli, on the features of their senses, and on deducing viable counter-measures from the gained data of these research areas becomes mandatory. Furthermore, the vastly different insect perception of the environment holds also great potential for technical applications.
+\noindent
+The word ``mosquito'' is Spanish for ``little fly''\cite{howstuff}. There have been over 2.700 species identified and described. Their distribution area is comprising almost the whole world (with the exception of Antarctica and some polar and sub-polar regions). The females of some species feed on blood. This is necessary for them to attain the ability lay eggs, because they need the proteins for their eggs. In passing from host to host it is possible for some species to transmit infectious, deadly diseases (e.g. malaria, yellow fever, dengue fever), if the mosquito bites a host. This means that additionally to the annoyance a mosquito represents, a real danger is added. In light of this, research on the behaviour of mosquitoes when hunting, on their reaction to environmental stimuli, on the features of their senses, and on deducing viable counter-measures from the gained data of these research areas becomes mandatory. 
+
+Furthermore, the vastly different insect perception of the environment holds also great potential for technical applications.
 In order to promote knowledge about this topic and to enable people to comprehend the influences on mosquitoes when searching for hosts, we developed an interactive simulation. This simulation will make it possible for the user to perceive the environment similar to the way a mosquito does. Through an appropriate mapping of the mosquito's senses, the user will be enabled to use these senses inside the simulation to track down blood sources.
+
 In the remainder of this paper, we will first discuss similar work and efforts (cf. Section~\ref{sec:relatedwork}). In Section~\ref{sec:models}, we will describe what the simulation does and how the user can interact with it. In the subsequent Section~\ref{sec:projectreq} we will relate Section~\ref{sec:models} with the project requirements and how these requirements are addressed in the simulation. Finally, we conclude with ideas for future work and give a short summary in Section~\ref{sec:summary}.
 
 \section{Related Work}
 \label{sec:relatedwork}
-
+\noindent
 An important feature of mosquitoes respectively of a lot of insects are their compound eyes. Compound eyes ``combine small eye volumes with a large field of view at the cost of comparatively low spatial resolution''~\cite{duparre2006}. Transferring the concept of compound eyes to technical systems has inspired the usage in micro-optics technology. For further details, see~\cite{duparre2006, duparre2004, voelkel2003, hamanaka1996}.
 Furthermore, efforts to use these artificial compound eyes in robotics have been made (cf.~\cite{martin1994, lichtensteiger1999}). 
 
@@ -179,6 +183,7 @@ In our simulation, we focus on the user experience and try to convey to the user
 
 \section{Models and Methods}
 \label{sec:models}
+\noindent
 In our interactive simulation, the user controls a female mosquito from first person view. Therefore, he can use representations of various mosquito senses to track down potential hosts. After landing, the user can initiate the process of blood sucking. During this process, he is exposed to the hosts counter measures. These counter measures are telegraphed to him through appropriate tells. In case the user manages to react to them in time, he has successfully fed on the host's blood---otherwise he dies. After having successfully fed two times, the user wins and the simulation starts all over on a higher difficulty level.
 
 
@@ -188,10 +193,10 @@ The simulation is set on a tropical island (cf. Figure~\ref{fig:island_several})
  %   \centering
 \subfloat[The gorilla asset. ]{\includegraphics[width=0.235\textwidth, height=4.4cm]{Figures/gorilla.png}
 \label{fig:gorilla}}
-\subfloat[The dino asset.]{\includegraphics[width=0.235\textwidth, height=4.4cm]{Figures/dino.png}
+\subfloat[The dinosaur asset.]{\includegraphics[width=0.235\textwidth, height=4.4cm]{Figures/dino.png}
 	\label{fig:dino}}
 
-\caption{The two used animal assets. Both may be moving in the simulation or stand still.}
+\caption{The two used animal assets. Both may be moving in the simulation or stand still. The user can land on them and start feeding on their blood. The animals will defend themselves against this, e.g. by rolling on the ground in order to smash the mosquito.}
 \label{fig:animals}
 \end{figure}
 
@@ -205,6 +210,7 @@ The GUI for the interactive simulation menu (cf. Figure~\ref{fig:gui}) is very s
 
 \subsection{Representation of Mosquito Senses}
 \label{sec:senses}
+\noindent
 Female mosquitoes of blood-feeding mosquito species have highly optimised senses for searching hosts. The three important senses involved in localising prey are visual, chemical, and heat sensors. 
 
 The interactive simulation is presented to the user with a far lower range of vision (cf. Figure~\ref{fig:vision}) compared to the viewing distance of humans. Furthermore, the spatial resolution is greatly reduced. Depending on whether the simulation is running on the first or second difficulty level the spatial resolution is either 39x22 (cf. Figure~\ref{fig:vision_highres}) or 33x18 (cf. Figure~\ref{fig:vision_lowres}). Additionally, the user experiences a soft screen shake from time to time. This emulates the susceptibility of the mosquito to wind impacts.
@@ -212,20 +218,20 @@ The interactive simulation is presented to the user with a far lower range of vi
 
 The second sense we have to address is the chemical sense, i.e. ``smelling''. Mosquitoes use the detection of \textit{carbon-dioxide}($CO_2$)---among other odours---to find potential hosts. We decided to map this sense to a visual representation. We use red globes (cf. Figure~\ref{fig:co2}) to represent carbon-dioxide. Every animal breathes these red globes, which are affected by wind, die after a certain time, and travel farther from their source (i.e. animal) than the user can see in the simulation. Moreover, the colour red is very distinct from the other colours in the simulation. This way, it is an object, which is easy to identify, and to follow. Additionally, if the mosquito moves through such an orb, its movement speed is increased for three seconds.
 
-\begin{figure}[ht!]
+\begin{figure*}[ht!]
  %   \centering
-\subfloat[]{\includegraphics[width=0.235\textwidth]{Figures/island.png}
+\subfloat[The simulation island without special, mosquito related processing of the picture.]{\includegraphics[width=0.5\textwidth]{Figures/island.png}
 	\label{fig:vision_normal}}
-\subfloat[]{\includegraphics[width=0.235\textwidth]{Figures/island_reducedvision.png}
+\subfloat[The range of vision has been reduced.]{\includegraphics[width=0.5\textwidth]{Figures/island_reducedvision.png}
 \label{fig:vision_range}}\\
-\subfloat[]{\includegraphics[width=0.235\textwidth]{Figures/island_reducedvision_highres.png}
+\subfloat[Reduced range of vision and reduced spatial resolution.]{\includegraphics[width=0.5\textwidth]{Figures/island_reducedvision_highres.png}
 	\label{fig:vision_highres}}
-\subfloat[]{\includegraphics[width=0.235\textwidth]{Figures/island_reducedvision_lowres.png}
+\subfloat[Reduced range of vision and stronger reduced spatial resolution.]{\includegraphics[width=0.5\textwidth]{Figures/island_reducedvision_lowres.png}
 	\label{fig:vision_lowres}}
 
-\caption{The same area of the simulation seen with different ``eyes'': (a) The simulation island without special, mosquito related processing of the picture (b) The range of vision has been reduced. (c) Reduced range of vision and reduced spatial resolution. (d) Reduced range of vision and stronger reduced spatial resolution.}
+\caption{The same area of the simulation seen with different ``eyes''.}
 \label{fig:vision}
-\end{figure}
+\end{figure*}
 
 \begin{figure}[ht!]
 \includegraphics[width=0.47\textwidth]{Figures/co2.png}
@@ -266,16 +272,18 @@ After the user has successfully tracked down a potential host and has managed to
 
 \subsection{User Experience}
 \label{sec:ux}
+\noindent
 The only help the player gets is the tutorial. It covers the key assignment, what the objective of the user is, and some screen shots explaining the game mechanics. Furthermore, during the simulation, there are neither button prompts nor any other UI. All information the user needs for his objective is conveyed in an immersive way, without any overlays inferring with the original, mosquito-inspired presentation. 
 Due to the very alien nature of the picture presented to the user, it is difficult to recognise what he is actually looking at. This makes it necessary for the user to rely heavily on the given game mechanics (i.e. carbon-dioxide clouds, movement recognition, heat sensors) and learn how to use them. The carbon-dioxide plums, for example, will seldom directly lead to prey, because firstly, the prey could be moving, and secondly wind influences the movement direction of the plumes. It is up to the user to deduce the wind direction from observing the carbon-dioxide plumes.
 
 \section{Project Requirements}
 \label{sec:projectreq}
-
+\noindent
 In this section, we will explain how scientific basics inspired the game mechanics in the interactive simulation (cf. Section~\ref{sec:proj_science}). In Section~\ref{sec:game}, we have a look at the user interaction and how these relate to gamifying the simulation. Afterwards, we discuss the learning tasks of the user (cf. Section~\ref{sec:complexity}) and, finally, in Section~\ref{sec:aesthetics}, we explain the driving motivations behind the realised aesthetics.
 
 \subsection{Science}
 \label{sec:proj_science}
+\noindent
 The life circle of a mosquito has four phases: egg, larva, pupa, and adult~\cite{howstuff}. For our interactive simulation, we focus on the adult phase. As mentioned earlier, only female mosquitoes
 feed on blood. For some species, this is mandatory in order to lay eggs, while for other species it increases the amount of eggs. The objectives, which a female mosquito aims to fulfil during its adult phase are: foraging, mating, blood sucking, and laying eggs. All these objectives can usually be repeated several times during the lifetime of a mosquito. For the purpose of this simulation, we focus on the perspective of a female mosquito, solely taking the aspect of feeding on blood into account.  
 
@@ -301,6 +309,7 @@ According to Breugel et al.~\cite{breugel2015} the heat sensors play an importan
 
 \subsection{Gamification}
 \label{sec:game}
+\noindent
 The user can control the mosquito in first person view. His objective is to follow the trail of carbon-dioxide plumes and visual indicators to approach a potential host. After landing on his prey, the user can initiate the feeding on blood. When the user recognises a screen shake and vignetting effect---this represents counter measures by the prey, e.g. trying to smash the mosquito (cf. Figure~\ref{fig:danger})---he must fly away from the animal in order to survive. All the interactions triggered by the user are done by pressing the right buttons. There are no button prompts or anything similar.
 
 If the user manages to successfully feed on blood twice, he has won the round. After that he is prompted with the accumulated points. The number of points he earns is depending on the amount of time it took the user to achieve winning the round. 
@@ -308,10 +317,12 @@ If the user manages to successfully feed on blood twice, he has won the round. A
 
 \subsection{Complexity}
 \label{sec:complexity}
+\noindent
 The learning complexity of the user consists mainly of an adaptation process to the alien visual perception of the world. He has to learn not to rely on trying to identify any of the objects like, for example, trees or huts. Instead learning to follow the the plume orbs, inferring the wind direction, and anticipating the movement patterns of the animals are possible tasks he has to satisfy. Maintaining a sense of the spatial orientation will be another very difficult learning task. Due to the very limited range of vision in conjunction with the unfamiliar spatial resolution, it is vastly difficult for the user to know where he is.
 
 \subsection{Aesthetics}
 \label{sec:aesthetics}
+\noindent
 The only GUI the simulation will offer is the main menu. This main menu is overlayed on top of the simulation and is rather transparent. Thus, the immersion is disturbed only to a very minor extend. The colours chosen for the fonts in the main menu are similar to the ones used for the main game mechanics (carbon-dioxide: red, movement detection: yellow, heat: orange). This means that both in the menu and in the simulation the important stuff has the same distinctly colours that differentiate themselves very well from the rest.
 Besides the main menu no GUI exists. Controlling the mosquito requires the user to memorize a few key assignments, which he can find in the tutorial.
 
@@ -320,12 +331,14 @@ The island itself consists of realistic modelled objects. Due to the way we impa
 The used colours of the island are mostly blackish, brownish and greenish. Particularly, the used colours for the game mechanics (carbon-dioxide: red, movement detection: yellow, heat: orange) are very distinct from the rest. This distinction serves to roles. Firstly, the aforementioned colours are no real physical objects in the world. All three are representations for senses. This means visual information that would not be available in the real world is separated through colours from the rest of the simulation word. Secondly, these colours are very easy to identify for the user. They can be seen as signal colours. Thus, this makes it naturally possible for the user to easily distinguish important information for the hunt for blood from unimportant information. 
 
 
-\section{Summary \& Future Work}
+\section{Summary}
 \label{sec:summary}
+\noindent
+In this paper, we presented an interactive simulation where the user controls a mosquito in first person view. Thereby, we focussed on the process of feeding on blood. The simulation is set on a tropical island. The users objective is to search for prey---in the simulation represented through dinosaurs and gorillas---in order to get some blood. In order to achieve this, he is offered an appropriate mapping of relevant mosquito senses to the simulation. Depending on the distance to his prey, the user of the simulation can either rely on following a trail of carbon-dioxide, recognising movement in range of vision and approaching it, or recognising heat sources. While feeding on blood, the user has to be aware of the host's counter measures, e.g. getting hit by the gorilla's arms. After having successfully reacted to the hosts defences, the user's feeding on blood was fruitful. If the user manages to feed on blood twice, he wins and can start a new simulation on the higher difficulty level. We implemented two difficulty levels with the higher on featuring a reduced range of vision, reduced movement speed of the mosquito, and reduced spatial resolution.
 
-In this paper we presented an interactive simulation, where the user controls a mosquito. Thereby, we focussed on the process of feeding on blood. The simulation is set on a tropical island. The users objective is to search for prey in order to get some blood. In order to achieve this, he is offered an appropriate mapping of relevant mosquito senses to the simulation. Depending on the distance to his prey, the user can either rely on following a trail of carbon-dioxide, recognising movement and approaching it, or recognising heat sources. While feeding on blood, the user has to be aware of the host's counter measures. After having successfully reacted to the hosts defences, the user's feeding on blood was fruitful. If he manages to feed on blood twice, he wins and can start a new simulation on a higher difficulty level.
-
-
+\section{Future Work}
+\label{sec:futurework}
+\noindent
 The current state of the simulation is a proof-of-concept. We suggest several extensions for the future. 
 The two main suggestions are related to the perceived colours and field of view. The spectral sensitivity of mosquitoes ranges from 323nm (ultraviolet) to 621nm (orange-red)~\cite{muir1992}. This means that mosquitoes cannot sense red, but can sense ultraviolet. In order to cut the red from the picture, we propose firstly make some imaging using filter which suppress red. After that it would be possible to deduce how to manipulate the images in the simulation to achieve a similar effect. The same could be done for ultraviolet. Additionally, one could extend the simulation with a game mechanic for finding food in the form of flowers. Flowers shows unique shapes and signs when only their ultraviolet emission is viewed. This information is used by insects to determining the type of flower and the precise location of nectar.
 
