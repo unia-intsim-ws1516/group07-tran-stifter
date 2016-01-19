@@ -1,0 +1,228 @@
+% This is "sig-alternate.tex" V2.1 April 2013
+% This file should be compiled with V2.5 of "sig-alternate.cls" May 2012
+%
+% This example file demonstrates the use of the 'sig-alternate.cls'
+% V2.5 LaTeX2e document class file. It is for those submitting
+% articles to ACM Conference Proceedings WHO DO NOT WISH TO
+% STRICTLY ADHERE TO THE SIGS (PUBS-BOARD-ENDORSED) STYLE.
+% The 'sig-alternate.cls' file will produce a similar-looking,
+% albeit, 'tighter' paper resulting in, invariably, fewer pages.
+%
+% ----------------------------------------------------------------------------------------------------------------
+% This .tex file (and associated .cls V2.5) produces:
+%       1) The Permission Statement
+%       2) The Conference (location) Info information
+%       3) The Copyright Line with ACM data
+%       4) NO page numbers
+%
+% as against the acm_proc_article-sp.cls file which
+% DOES NOT produce 1) thru' 3) above.
+%
+% Using 'sig-alternate.cls' you have control, however, from within
+% the source .tex file, over both the CopyrightYear
+% (defaulted to 200X) and the ACM Copyright Data
+% (defaulted to X-XXXXX-XX-X/XX/XX).
+% e.g.
+% \CopyrightYear{2007} will cause 2007 to appear in the copyright line.
+% \crdata{0-12345-67-8/90/12} will cause 0-12345-67-8/90/12 to appear in the copyright line.
+%
+% ---------------------------------------------------------------------------------------------------------------
+% This .tex source is an example which *does* use
+% the .bib file (from which the .bbl file % is produced).
+% REMEMBER HOWEVER: After having produced the .bbl file,
+% and prior to final submission, you *NEED* to 'insert'
+% your .bbl file into your source .tex file so as to provide
+% ONE 'self-contained' source file.
+%
+% ================= IF YOU HAVE QUESTIONS =======================
+% Questions regarding the SIGS styles, SIGS policies and
+% procedures, Conferences etc. should be sent to
+% Adrienne Griscti (griscti@acm.org)
+%
+% Technical questions _only_ to
+% Gerald Murray (murray@hq.acm.org)
+% ===============================================================
+%
+% For tracking purposes - this is V2.0 - May 2012
+
+\documentclass{sig-alternate-05-2015}
+
+
+\begin{document}
+
+% Copyright
+%\setcopyright{acmcopyright}
+%\setcopyright{acmlicensed}
+%\setcopyright{rightsretained}
+%\setcopyright{usgov}
+%\setcopyright{usgovmixed}
+%\setcopyright{cagov}
+%\setcopyright{cagovmixed}
+
+
+% DOI
+%\doi{10.475/123_4}
+%
+%% ISBN
+%\isbn{123-4567-24-567/08/06}
+%
+%%Conference
+%\conferenceinfo{PLDI '13}{June 16--19, 2013, Seattle, WA, USA}
+%
+%\acmPrice{\$15.00}
+
+%
+% --- Author Metadata here ---
+\conferenceinfo{IntSim}{2015, Augsburg}
+%\CopyrightYear{2007} % Allows default copyright year (20XX) to be over-ridden - IF NEED BE.
+%\crdata{0-12345-67-8/90/01}  % Allows default copyright data (0-89791-88-6/97/05) to be over-ridden - IF NEED BE.
+% --- End of Author Metadata ---
+
+\title{Booyaa - An Interactive Simulation on Transcendent Manifestations\titlenote{``It should convey simply what the paper is about rather than describing its detailed contents [...] Ruthlessly prune unnecessary words and keep it as short as possible.''
+}}
+%
+% You need the command \numberofauthors to handle the 'placement
+% and alignment' of the authors beneath the title.
+%
+% For aesthetic reasons, we recommend 'three authors at a time'
+% i.e. three 'name/affiliation blocks' be placed beneath the title.
+%
+% NOTE: You are NOT restricted in how many 'rows' of
+% "name/affiliations" may appear. We just ask that you restrict
+% the number of 'columns' to three.
+%
+% Because of the available 'opening page real-estate'
+% we ask you to refrain from putting more than six authors
+% (two rows with three columns) beneath the article title.
+% More than six makes the first-page appear very cluttered indeed.
+%
+% Use the \alignauthor commands to handle the names
+% and affiliations for an 'aesthetic maximum' of six authors.
+% Add names, affiliations, addresses for
+% the seventh etc. author(s) as the argument for the
+% \additionalauthors command.
+% These 'additional authors' will be output/set for you
+% without further effort on your part as the last section in
+% the body of your article BEFORE References or any Appendices.
+
+\numberofauthors{1} %  in this sample file, there are a *total*
+% of EIGHT authors. SIX appear on the 'first-page' (for formatting
+% reasons) and the remaining two appear in the \additionalauthors section.
+%
+\author{
+% You can go ahead and credit any number of authors here,
+% e.g. one 'row of three' or two rows (consisting of one row of three
+% and a second row of one, two or three).
+%
+% The command \alignauthor (no curly braces needed) should
+% precede each author name, affiliation/snail-mail address and
+% e-mail address. Additionally, tag each line of
+% affiliation/address with \affaddr, and tag the
+% e-mail address with \email.
+%
+% 1st. author
+\alignauthor
+Sebastian von Mammen and Sarah Edenhofer\\
+       \affaddr{Organic Computing}\\
+       \affaddr{University of Augsburg}\\
+       \email{\{sebastian.von.mammen,sarah.edenhofer\}@informatik.uni-augsburg.de}
+       }
+% There's nothing stopping you putting the seventh, eighth, etc.
+% author on the opening page (as the 'third row') but we ask,
+% for aesthetic reasons that you place these 'additional authors'
+% in the \additional authors block, viz.
+%\additionalauthors{Additional authors: John Smith (The Th{\o}rv{\"a}ld Group,
+%email: {\texttt{jsmith@affiliation.org}}) and Julius P.~Kumquat
+%(The Kumquat Consortium, email: {\texttt{jpkumquat@consortium.net}}).}
+%\date{30 July 1999}
+% Just remember to make sure that the TOTAL number of authors
+% is the number that will appear on the first page PLUS the
+% number that will appear in the \additionalauthors section.
+
+\maketitle
+\begin{abstract}
+``the only part of your paper most people will ever read''
+``describing why you did what you did followed by a brief description of your study design, a synopsis of the results, and a clear what-it-all-means message at the end''
+\end{abstract}
+
+\section{Introduction}
+\begin{itemize}
+\item introduce the general topic
+\item introduce to your idea and your methodology
+\item in this context you conclude the introduction with an outline of the remainder of the paper, e.g. ``[...] in Section 2, we provide a brief survey on related work around developmental systems and interactive art installations. Section 3 presents...''
+\end{itemize}
+
+\section{Related Work}
+\begin{itemize}
+\item comprehensive background survey
+\item explanations of the related methodologies
+\item summaries of their achievements and their shortcomings
+\item references to seminal publications
+\item how did other works inform yours?
+\item what are those other works about?
+\item how is your work related to other works?
+\item important: what is different?
+\end{itemize}
+
+\section{Models and Methods}
+\begin{itemize}
+\item explain what you did
+\item explain how you did it
+\item explain why you did it that way
+\end{itemize}
+This is the focus of your report (should make up for about four of the six pages of your report). I recommend first describing the ``big picture'': summarise the overall flow of your interactive simulation. Then dive into the details. Depict (in figures and diagrams) the different scenes/screens the user finds himself in, explain what he can do and how his actions are intertwined with the simulation model. How does the GUI work, how does the UI work, what is important about the UX, what is the most important usability feat? What is the learning/training/exploration goal, how do you achieve it? Etc.
+
+\section{Project Requirements}
+In this section, you should briefly describe, how the aforementioned models and methods that you developed address the project requirements. 
+
+\subsection{Science}
+\begin{itemize}
+\item CoSMoS compliant
+\item validity
+\item innovation
+\item scientific context
+\item exploration value
+\item model representation
+\end{itemize}
+
+\subsection{Gamification}
+\begin{itemize}
+\item interaction possibilities
+\item interaction guidance
+\item game elements
+\item relatedness
+\item competence
+\item autonomy
+\end{itemize}
+
+\subsection{Complexity}
+\begin{itemize}
+\item learning processes
+\item conveyed complexity
+\item model complexity
+\item real-time methods
+\end{itemize}
+
+\subsection{Aesthetics}
+\begin{itemize}
+\item design principles
+\item art work/CG design
+\item novelty
+\item informativeness
+\item efficiency
+\end{itemize}
+
+\section{Summary \& Future Work}
+\begin{itemize}
+\item summarise your work (motivation, concept, implementation, fulfilment of the requirements)
+\item describe what you would like to do next in the context of the presented work
+\item why is the presented work a good starting point for these ideas?
+\item where would be the benefit of the outlined future work?
+\end{itemize}
+
+\nocite{Goldsmith:2010kx,Lilleyman:1995fk,Rogers:2007vn,Snieder:2009ys}
+
+\bibliographystyle{ieeetr}
+\bibliography{sciwri}  
+
+\end{document}
