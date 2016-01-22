@@ -4,10 +4,10 @@ using System.Collections;
 public class MosquitoMovement : MonoBehaviour {
 
     private const float speedFactorNormal = 1.0f;
-    private const float speedFactorFast = 13.5f;
-    private const int fastSpeedTime = 120;
+    private const float speedFactorFast = 2.5f;
+    private const int fastSpeedTime = 3;
 
-    private float timeRemaining;
+    private float timeRemaining = 120;
 
     [Range(0,600)]
     public float moveSpeed;
@@ -72,10 +72,16 @@ public class MosquitoMovement : MonoBehaviour {
         cc.Move(transform.TransformDirection(new Vector3(-dx, dy, -dz)));
     }
 
-    void OnParcticleCollision(GameObject other)
+    //void OnParcticleCollision(GameObject other)
+    //{
+    //    Debug.Log("yeah");
+    //    speedFactor = speedFactorFast;
+    //    timeRemaining = fastSpeedTime;
+    //}
+
+    public void increaseMovementSpeedTemporarily( )
     {
-        Debug.Log("yeah");
-        speedFactor = speedFactorFast;
-        timeRemaining = fastSpeedTime;
+        Debug.Log("Hallo Movement");
+        setSpeedFactor(true);
     }
 }

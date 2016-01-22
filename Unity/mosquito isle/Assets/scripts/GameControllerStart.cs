@@ -1,13 +1,13 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class GameController : MonoBehaviour {
+public class GameControllerStart : MonoBehaviour
+{
 
     private GameObject guiMenu;
     private Camera camWithoutBreath;
     public MosquitoMovement mosqMovement;
     private EnablePPFilters filters;
-    private ParticleSystem ps;
 
     private bool menuActive = true;
 
@@ -25,26 +25,28 @@ public class GameController : MonoBehaviour {
                     1 << LayerMask.NameToLayer("basic"));
     }
 
-	// Use this for initialization
-	void Awake () {
+    // Use this for initialization
+    void Awake()
+    {
         //Debug.Log("gc");
         guiMenu = GameObject.FindWithTag("GUIMenu");
         camWithoutBreath = Camera.main;
         filters = GameObject.FindObjectOfType<EnablePPFilters>();
-        ps = GetComponent<ParticleSystem>();
     }
 
     void Start()
     {
         // Time.timeScale = 0.0; USE THIS INSTEAD OF DIFFERENT SCENES
-        //Debug.Log(Application.loadedLevel);
+        Debug.Log(Application.loadedLevel);
+
+        menuActive = true;
         guiMenu.SetActive(true);
         mosqMovement.enabled = false;
-        setCullingMaskRestricted();
-        ParticleSystem ps = GetComponent<ParticleSystem>();
 
-        //Camera.main.GetComponent<ScreenShake>().screenShakeCam();
-       
+        //filters.toggleFarClipPlane();
+        //filters.setHighResolution(true);
+        //filters.enableDownsampling(true, false);
+        //setCullingMaskAll();        
     }
 
     public void StartGame()
@@ -59,27 +61,26 @@ public class GameController : MonoBehaviour {
         //filters.enableDownsampling(true, false);
         //setCullingMaskAll();
     }
-	
-	// Update is called once per frame
-	void Update () {
-        //Debug.Log("gc_update");
-        if( Input.GetKeyDown(KeyCode.Escape) )
+
+    // Update is called once per frame
+    void Update()
+    {
+        Debug.Log("gc_update");
+        if (Input.GetKeyDown(KeyCode.Escape))
         {
-            if( menuActive == false )
+            if (menuActive == false)
             {
                 guiMenu.SetActive(true);
                 mosqMovement.enabled = false;
                 setCullingMaskRestricted();
-                //GameObject.FindWithTag("Player").GetComponent<ScreenShake>().screenShakeCam();
             }
             else
             {
                 guiMenu.SetActive(false);
                 mosqMovement.enabled = true;
                 setCullingMaskAll();
-                GameObject.FindWithTag("Player").GetComponent<ScreenShake>().screenShakeCam();
             }
             menuActive = !menuActive;
         }
-	}
+    }
 }

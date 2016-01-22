@@ -15,11 +15,11 @@ public class EnableHeat : MonoBehaviour {
 
     // Use this for initialization
     void Start () {
-        Debug.Log(gameObject.name);
+        //Debug.Log(gameObject.name);
         playerTag = GameObject.FindWithTag("Player");
         gorillasSit = GameObject.FindGameObjectsWithTag("GorillaSit");
         gorillasMoving = GameObject.FindGameObjectsWithTag("GorillaMove");
-        Debug.Log( gorillasMoving.Length );
+        //Debug.Log( gorillasMoving.Length );
 
         
         shader1 = Shader.Find("Custom/ToonBasicAdjusted");
