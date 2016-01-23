@@ -14,7 +14,7 @@ public class EnablePPFilters : MonoBehaviour {
     private bool downsamplingLow = false;
     private bool downsamplingHigh = false;
 
-    private bool fogState = false;
+    //private bool fogState = false;
 
     private Downsampling downComp;
     private GameObject tagCameraWithoutBreath;
@@ -22,7 +22,6 @@ public class EnablePPFilters : MonoBehaviour {
     // Use this for initialization
     void Start () {
         tagCameraWithoutBreath = GameObject.FindWithTag("MainCamera");
-        //Debug.Log("camera found: " + tagCameraWithoutBreath.CompareTag("WithoutBreath"));
         downComp = tagCameraWithoutBreath.GetComponent<Downsampling>();
     }
 	
@@ -98,6 +97,10 @@ public class EnablePPFilters : MonoBehaviour {
                 enableDownsampling(false, false);
                 setLowResolution(false);
             }
+        }
+        else if( Input.GetKeyDown( KeyCode.F) )
+        {
+
         }
         //else if (Input.GetKeyDown(KeyCode.F5))
         //{

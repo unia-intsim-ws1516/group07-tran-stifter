@@ -54,7 +54,7 @@ public class DockToAnimal : MonoBehaviour {
 
         if( calculateDistance( playerTag, nearestAnimal ) <= dockingDistance  && Input.GetKeyDown(KeyCode.F) )
         {
-            Debug.Log("can dock?");
+            //Debug.Log("can dock?");
             playerTag.transform.parent = nearestAnimal.transform;
             playerTag.GetComponent<MosquitoMovement>().enabled = false;
         }

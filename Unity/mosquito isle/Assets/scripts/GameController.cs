@@ -3,83 +3,103 @@ using System.Collections;
 
 public class GameController : MonoBehaviour {
 
-    private GameObject guiMenu;
-    private Camera camWithoutBreath;
-    public MosquitoMovement mosqMovement;
-    private EnablePPFilters filters;
-    private ParticleSystem ps;
+    private const int farclipOne = 650;
+    private const int farclipTwo = 450;
 
-    private bool menuActive = true;
+    private const int moveSpeedOne = 100;
+    private const int moveSpeedTwo = 80;
+
+    private GameDataContainer gdc;
 
     private void setCullingMaskAll()
     {
-        camWithoutBreath.cullingMask = (1 << LayerMask.NameToLayer("Default") | 1 << LayerMask.NameToLayer("TransparentFX") |
+        gdc.camWithoutBreath.cullingMask = (1 << LayerMask.NameToLayer("Default") | 1 << LayerMask.NameToLayer("TransparentFX") |
                     1 << LayerMask.NameToLayer("IgnoreRaycast") | 1 << LayerMask.NameToLayer("Water") | 1 << LayerMask.NameToLayer("UI") |
                     1 << LayerMask.NameToLayer("basic") | 1 << LayerMask.NameToLayer("with breath"));
     }
 
     private void setCullingMaskRestricted()
     {
-        camWithoutBreath.cullingMask = (1 << LayerMask.NameToLayer("Default") | 1 << LayerMask.NameToLayer("TransparentFX") |
+        gdc.camWithoutBreath.cullingMask = (1 << LayerMask.NameToLayer("Default") | 1 << LayerMask.NameToLayer("TransparentFX") |
                     1 << LayerMask.NameToLayer("IgnoreRaycast") | 1 << LayerMask.NameToLayer("Water") | 1 << LayerMask.NameToLayer("UI") |
                     1 << LayerMask.NameToLayer("basic"));
     }
 
 	// Use this for initialization
 	void Awake () {
-        //Debug.Log("gc");
-        guiMenu = GameObject.FindWithTag("GUIMenu");
-        camWithoutBreath = Camera.main;
-        filters = GameObject.FindObjectOfType<EnablePPFilters>();
-        ps = GetComponent<ParticleSystem>();
+
     }
 
     void Start()
     {
-        // Time.timeScale = 0.0; USE THIS INSTEAD OF DIFFERENT SCENES
-        //Debug.Log(Application.loadedLevel);
-        guiMenu.SetActive(true);
-        mosqMovement.enabled = false;
-        setCullingMaskRestricted();
-        ParticleSystem ps = GetComponent<ParticleSystem>();
+        gdc = GameObject.FindWithTag("GameData").GetComponent<GameDataContainer>();
+        gdc.reinitialiseReferences();
 
-        //Camera.main.GetComponent<ScreenShake>().screenShakeCam();
-       
+        //Time.timeScale = 0.0f;
+        if( gdc.gameStarted==false)
+        {
+            Time.timeScale = 0.1f;
+            gdc.guiMenu.SetActive(true);
+            gdc.mosqMovement.enabled = false;
+            setCullingMaskRestricted();
+        }    
+        else
+        {
+            Time.timeScale = 1.0f;
+            gdc.guiMenu.SetActive(false);
+            gdc.menuActive = false;
+            gdc.mosqMovement.enabled = true;
+            setCullingMaskAll();
+            gdc.filters.enabled = true;
+
+            if( gdc.firstLevel == true )
+            {
+                gdc.mosqMovement.moveSpeed = moveSpeedOne;
+                gdc.filters.farClipPlaneMin = farclipOne;
+                gdc.filters.enableDownsampling(true, false);
+                gdc.filters.setHighResolution(true);
+            }
+            else
+            {
+                gdc.mosqMovement.moveSpeed = moveSpeedTwo;
+                gdc.filters.farClipPlaneMin = farclipTwo;
+                gdc.filters.enableDownsampling(true, true);
+                gdc.filters.setLowResolution(true);
+            }
+            gdc.filters.toggleFarClipPlane();
+        }   
     }
 
     public void StartGame()
     {
-        Application.LoadLevel(1);
-        //menuActive = false;
-        //guiMenu.SetActive(false);
-        //mosqMovement.enabled = true;
-
-        //filters.toggleFarClipPlane();
-        //filters.setHighResolution( true );
-        //filters.enableDownsampling(true, false);
-        //setCullingMaskAll();
+        gdc.gameStarted = true;
+        if (gdc.firstLevel == false)
+        {
+            gdc.firstLevel = true;
+        }
+        Application.LoadLevel(0);
     }
 	
 	// Update is called once per frame
 	void Update () {
         //Debug.Log("gc_update");
-        if( Input.GetKeyDown(KeyCode.Escape) )
+        if( Input.GetKeyDown(KeyCode.Escape) && gdc.gameStarted == true )
         {
-            if( menuActive == false )
+            if( gdc.menuActive == false )
             {
-                guiMenu.SetActive(true);
-                mosqMovement.enabled = false;
+                gdc.guiMenu.SetActive(true);
+                gdc.mosqMovement.enabled = false;
                 setCullingMaskRestricted();
-                //GameObject.FindWithTag("Player").GetComponent<ScreenShake>().screenShakeCam();
+                Time.timeScale = 0.0f;
             }
             else
             {
-                guiMenu.SetActive(false);
-                mosqMovement.enabled = true;
+                gdc.guiMenu.SetActive(false);
+                gdc.mosqMovement.enabled = true;
                 setCullingMaskAll();
-                GameObject.FindWithTag("Player").GetComponent<ScreenShake>().screenShakeCam();
+                Time.timeScale = 1.0f;
             }
-            menuActive = !menuActive;
+            gdc.menuActive = !gdc.menuActive;
         }
 	}
 }

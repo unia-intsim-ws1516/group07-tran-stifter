@@ -28,9 +28,6 @@ public class MosquitoMovement : MonoBehaviour {
     void Start () {
         //Debug.Log("test");
         speedFactor = speedFactorNormal;
-
-        part = GetComponent<ParticleSystem>();
-        collisionEvents = new ParticleCollisionEvent[16];
     }
 
     // Update is called once per frame
