@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
+
 public class GameController : MonoBehaviour {
 
     private const int farclipOne = 650;
@@ -10,6 +11,10 @@ public class GameController : MonoBehaviour {
     private const int moveSpeedTwo = 80;
 
     private GameDataContainer gdc;
+    public ScreenShake screenShakeScript;
+    public DockToAnimal dockAnimal;
+
+    private float timerScreenShake = 20.0f;
 
     private void setCullingMaskAll()
     {
@@ -32,6 +37,9 @@ public class GameController : MonoBehaviour {
 
     void Start()
     {
+        screenShakeScript = GameObject.FindObjectOfType<ScreenShake>();
+        dockAnimal = GameObject.FindObjectOfType<DockToAnimal>();
+
         gdc = GameObject.FindWithTag("GameData").GetComponent<GameDataContainer>();
         gdc.reinitialiseReferences();
 
@@ -100,6 +108,22 @@ public class GameController : MonoBehaviour {
                 Time.timeScale = 1.0f;
             }
             gdc.menuActive = !gdc.menuActive;
+        }
+
+        //if( Input.GetKeyDown( KeyCode.F ) )
+        //{
+        //    screenShakeScript.Shake( 0.16f, 0.008f);
+        //}
+
+        //timer for screen shake stuff
+        timerScreenShake -= Time.deltaTime;
+        if ( timerScreenShake < 0 )
+        {
+            if (dockAnimal.docked == false)
+            {
+                screenShakeScript.Shake(0.16f, 0.008f);
+            }
+            timerScreenShake = Random.Range(10.0f, 60.0f);
         }
 	}
 }

@@ -2,48 +2,46 @@
 using System.Collections;
 
 
-public class ScreenShake : MonoBehaviour {
+public class ScreenShake : MonoBehaviour
+{
 
-    private const float magnitude = 155.0f;
-    private const int duration = 1800;
-    private float percentComplete = 0;
+    private Vector3 originPosition;
+    private Quaternion originRotation;
+    public float shake_decay;
+    public float shake_intensity;
 
-    private bool screenshake = false;
+    private static int pause = 10;
+    private static int counter = 0;
+
+    void Start ()
+    {
+
+    }
 
     void Update()
     {
-        if (screenshake == true)
+        counter++;
+        if( counter % pause == 0 )
         {
-            Debug.Log("Hallo screen shake");
-            float elapsed = 0.0f;
-
-            //Vector3 origCamPos = Camera.main.transform.position;
-            Vector3 origPos = GameObject.FindWithTag("Player").transform.position;
-
-            while (elapsed < duration)
+            if (shake_intensity > 0)
             {
-                elapsed += Time.deltaTime;
-
-                percentComplete = elapsed / duration;
-                float damper = 1.0f - Mathf.Clamp(4.0f * percentComplete - 3.0f, 0.0f, 1.0f);
-
-                float x = Random.value * 2.0f - 1.0f;
-                float y = Random.value * 2.0f - 1.0f;
-
-                x *= magnitude * damper;
-                y *= magnitude * damper;
-
-                //Camera.main.transform.position = new Vector3(x, y, origCamPos.z);
-                GameObject.FindWithTag("Player").transform.position = new Vector3(x, y, origPos.z);
+                transform.position = originPosition + Random.insideUnitSphere * shake_intensity;
+                transform.rotation = new Quaternion(
+                originRotation.x + Random.Range(-shake_intensity, shake_intensity) * .2f,
+                originRotation.y + Random.Range(-shake_intensity, shake_intensity) * .2f,
+                originRotation.z + Random.Range(-shake_intensity, shake_intensity) * .2f,
+                originRotation.w + Random.Range(-shake_intensity, shake_intensity) * .2f);
+                shake_intensity -= shake_decay;
             }
-            //Camera.main.transform.position = origCamPos;
-            GameObject.FindWithTag("Player").transform.position = origPos;
-            screenshake = false;
-        }
+        }        
     }
 
-    public void screenShakeCam()
+    public void Shake(float intensity, float decay)
     {
-        screenshake = true;
+        originPosition = transform.position;
+        originRotation = transform.rotation;
+        shake_intensity = intensity;
+        shake_decay = decay;
     }
+
 }

@@ -4,10 +4,16 @@ using System.Collections;
 public class DockToAnimal : MonoBehaviour {
 
     public const int dockingDistance = 100;
+    public bool docked = false;
 
     GameObject playerTag;
     GameObject[] gorillasSit;
     GameObject[] gorillasMoving;
+
+    private Camera cam;
+    private BloodFeeding bf;
+
+    private float timer;
 
     // Use this for initialization
     void Start () {
@@ -15,6 +21,8 @@ public class DockToAnimal : MonoBehaviour {
         gorillasSit = GameObject.FindGameObjectsWithTag("GorillaSit");
         gorillasMoving = GameObject.FindGameObjectsWithTag("GorillaMove");
 
+        cam = Camera.main;
+        bf = cam.GetComponent<BloodFeeding>();
     }
 
     private GameObject findNearestAnimal()
@@ -57,11 +65,17 @@ public class DockToAnimal : MonoBehaviour {
             //Debug.Log("can dock?");
             playerTag.transform.parent = nearestAnimal.transform;
             playerTag.GetComponent<MosquitoMovement>().enabled = false;
+            bf.enabled = true;
+            docked = true;
         }
         else if( Input.GetKeyDown(KeyCode.E) )
         {
             playerTag.transform.parent = null;
             playerTag.GetComponent<MosquitoMovement>().enabled = true;
+            bf.resetTimer();
+            bf.disableStuff();
+            bf.enabled = false;
+            docked = false;
         }
     }
 }
