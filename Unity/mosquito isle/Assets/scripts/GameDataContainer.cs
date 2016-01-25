@@ -13,6 +13,11 @@ public class GameDataContainer : MonoBehaviour {
     public bool gameStarted = false;
     public bool firstLevel = true;
 
+    public bool loosing = false;
+    public bool winning2ndLevel = false;
+
+    public float timerSimulationTime = 0;
+
 
     void Awake()
     {

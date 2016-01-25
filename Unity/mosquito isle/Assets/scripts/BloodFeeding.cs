@@ -6,20 +6,39 @@ public class BloodFeeding : MonoBehaviour {
 
     public float timer = 3.0f;
     private const float timerTime = 3.0f;
+    private const int bloodFeedingSuccess = 12;
+    private int bloodFeedingCounter = 0;
+
 
     private GameObject tagCameraWithoutBreath;
     private DockToAnimal dock;
     private ScreenShakeFeeding ssf;
+    private GameController gc;
 
     // Use this for initialization
     void Start () {
         tagCameraWithoutBreath = GameObject.FindWithTag("MainCamera");
         dock = GameObject.FindObjectOfType<DockToAnimal>();
         ssf = tagCameraWithoutBreath.GetComponentInParent<ScreenShakeFeeding>();
+        gc = GameObject.FindObjectOfType<GameController>();
     }
 	
 	// Update is called once per frame
 	void Update () {
+
+        if( Input.GetKeyDown( KeyCode.R ) && dock.docked == true )
+        {
+            bloodFeedingCounter++;
+
+            if( bloodFeedingCounter == bloodFeedingSuccess )
+            {
+                bloodFeedingCounter = 0;
+                tagCameraWithoutBreath.GetComponent<ColorCorrectionCurves>().enabled = true;
+                gc.successfulBloodFeeding = true;
+ 
+            }
+        }
+
         if( dock.docked == true )
         {
             timer -= Time.deltaTime;

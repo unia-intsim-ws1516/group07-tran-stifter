@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityEngine.UI;
 
 
 public class GameController : MonoBehaviour {
@@ -10,9 +11,17 @@ public class GameController : MonoBehaviour {
     private const int moveSpeedOne = 100;
     private const int moveSpeedTwo = 80;
 
+    //private const string gameOverString = "GAME OVER!";
+    //private const string winningString = "YOU WON!";
+
     private GameDataContainer gdc;
     public ScreenShake screenShakeScript;
     public DockToAnimal dockAnimal;
+
+
+    public bool successfulBloodFeeding = false;
+
+    private float timerUntilWin = 2.0f;
 
     private float timerScreenShake = 20.0f;
 
@@ -90,6 +99,8 @@ public class GameController : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+        gdc.timerSimulationTime += Time.deltaTime;
+
         //Debug.Log("gc_update");
         if( Input.GetKeyDown(KeyCode.Escape) && gdc.gameStarted == true )
         {
@@ -126,4 +137,47 @@ public class GameController : MonoBehaviour {
             timerScreenShake = Random.Range(10.0f, 60.0f);
         }
 	}
+
+    public void loadSecondDifficulty()
+    {
+        gdc.firstLevel = false;
+        Application.LoadLevel(0);
+    }
+
+    public bool isSecondLevel()
+    {
+        return !gdc.firstLevel;
+    }
+
+    public void loadHighscoreScene( bool loosing, bool winning2ndLevel )
+    {
+        gdc.loosing = loosing;
+        gdc.winning2ndLevel = winning2ndLevel;
+        
+        Application.LoadLevel(1);
+    }
+
+    public void checkWinningConditionAfterBloodFeeding()
+    {
+        if( successfulBloodFeeding == true )
+        {
+            StartCoroutine("SlowTime");
+            //this.loadHighscoreScene(false, this.isSecondLevel());
+        }
+    }
+
+    IEnumerator SlowTime()
+    {
+        float elapsed = 0.0f;
+
+        Debug.Log("Hallo slowtime");
+
+        while( elapsed < timerUntilWin )
+        {
+            elapsed += Time.deltaTime;
+
+            yield return null;
+        }
+        this.loadHighscoreScene(false, this.isSecondLevel());        
+    }
 }

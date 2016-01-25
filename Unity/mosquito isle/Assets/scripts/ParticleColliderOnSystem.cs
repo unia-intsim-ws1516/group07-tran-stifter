@@ -8,7 +8,6 @@ public class ParticleColliderOnSystem : MonoBehaviour {
 
 	void OnParticleCollision( GameObject other)
     {
-        Debug.Log(other);
         if ( other.Equals( GameObject.FindWithTag( "Player" ) ) )
         {
             mm.increaseMovementSpeedTemporarily();

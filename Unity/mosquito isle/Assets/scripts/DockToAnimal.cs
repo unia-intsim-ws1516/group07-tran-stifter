@@ -12,11 +12,13 @@ public class DockToAnimal : MonoBehaviour {
 
     private Camera cam;
     private BloodFeeding bf;
+    private GameController gc;
 
     private float timer;
 
     // Use this for initialization
     void Start () {
+        gc = GameController.FindObjectOfType<GameController>();
         playerTag = GameObject.FindWithTag("Player");
         gorillasSit = GameObject.FindGameObjectsWithTag("GorillaSit");
         gorillasMoving = GameObject.FindGameObjectsWithTag("GorillaMove");
@@ -76,6 +78,7 @@ public class DockToAnimal : MonoBehaviour {
             bf.disableStuff();
             bf.enabled = false;
             docked = false;
+            gc.checkWinningConditionAfterBloodFeeding();
         }
     }
 }

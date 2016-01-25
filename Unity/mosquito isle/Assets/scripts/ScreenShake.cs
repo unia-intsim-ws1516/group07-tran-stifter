@@ -10,7 +10,7 @@ public class ScreenShake : MonoBehaviour
     public float shake_decay;
     public float shake_intensity;
 
-    private static int pause = 10;
+    private static int pause = 4;
     private static int counter = 0;
 
     void Start ()

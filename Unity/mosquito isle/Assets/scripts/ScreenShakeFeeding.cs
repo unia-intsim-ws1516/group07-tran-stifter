@@ -10,9 +10,11 @@ public class ScreenShakeFeeding : MonoBehaviour {
 
     public bool shakeing = false;
 
+    public GameController gc;
+
     void Start()
     {
-
+        gc = GameObject.FindObjectOfType<GameController>();
     }
 
     void Update()
@@ -28,8 +30,7 @@ public class ScreenShakeFeeding : MonoBehaviour {
             shake_intensity -= shake_decay;
             if(shake_intensity <= 0)
             {
-                // change later
-                Debug.Break();
+                gc.loadHighscoreScene(true, false);
             }
         }
     }
