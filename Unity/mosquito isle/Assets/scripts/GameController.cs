@@ -8,7 +8,7 @@ public class GameController : MonoBehaviour {
     private const int farclipOne = 650;
     private const int farclipTwo = 450;
 
-    private const int moveSpeedOne = 100;
+    private const int moveSpeedOne = 120;
     private const int moveSpeedTwo = 80;
 
     //private const string gameOverString = "GAME OVER!";
@@ -21,9 +21,9 @@ public class GameController : MonoBehaviour {
 
     public bool successfulBloodFeeding = false;
 
-    private float timerUntilWin = 2.0f;
+    private float timerUntilWin = 3.0f;
 
-    private float timerScreenShake = 20.0f;
+    private float timerScreenShake = 8.0f;
 
     private void setCullingMaskAll()
     {
@@ -132,7 +132,7 @@ public class GameController : MonoBehaviour {
         {
             if (dockAnimal.docked == false)
             {
-                screenShakeScript.Shake(0.16f, 0.008f);
+                screenShakeScript.Shake(0.18f, 0.04f);
             }
             timerScreenShake = Random.Range(10.0f, 60.0f);
         }
@@ -169,8 +169,6 @@ public class GameController : MonoBehaviour {
     IEnumerator SlowTime()
     {
         float elapsed = 0.0f;
-
-        Debug.Log("Hallo slowtime");
 
         while( elapsed < timerUntilWin )
         {

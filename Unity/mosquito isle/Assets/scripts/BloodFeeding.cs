@@ -6,14 +6,16 @@ public class BloodFeeding : MonoBehaviour {
 
     public float timer = 3.0f;
     private const float timerTime = 3.0f;
-    private const int bloodFeedingSuccess = 12;
-    private int bloodFeedingCounter = 0;
+    private const int bloodFeedingSuccess = 6;
+    public int bloodFeedingCounter = 0;
 
 
     private GameObject tagCameraWithoutBreath;
     private DockToAnimal dock;
     private ScreenShakeFeeding ssf;
     private GameController gc;
+    private EnableHeat eh;
+    private Shader bloodSucked;
 
     // Use this for initialization
     void Start () {
@@ -21,6 +23,8 @@ public class BloodFeeding : MonoBehaviour {
         dock = GameObject.FindObjectOfType<DockToAnimal>();
         ssf = tagCameraWithoutBreath.GetComponentInParent<ScreenShakeFeeding>();
         gc = GameObject.FindObjectOfType<GameController>();
+        eh = GameObject.FindObjectOfType<EnableHeat>();
+        bloodSucked = Shader.Find("Custom/ToonBasicAdjusted");
     }
 	
 	// Update is called once per frame
@@ -30,10 +34,12 @@ public class BloodFeeding : MonoBehaviour {
         {
             bloodFeedingCounter++;
 
+          
             if( bloodFeedingCounter == bloodFeedingSuccess )
             {
+                eh.enoughBlood = false;
                 bloodFeedingCounter = 0;
-                tagCameraWithoutBreath.GetComponent<ColorCorrectionCurves>().enabled = true;
+                //tagCameraWithoutBreath.GetComponent<ColorCorrectionCurves>().enabled = true;
                 gc.successfulBloodFeeding = true;
  
             }
@@ -64,6 +70,7 @@ public class BloodFeeding : MonoBehaviour {
 
     public void disableStuff()
     {
+        //tagCameraWithoutBreath.GetComponent<VignetteAndChromaticAberration>().enabled = false;
         tagCameraWithoutBreath.GetComponent<VignetteAndChromaticAberration>().enabled = false;
         ssf.shakeing = false;
         ssf.enabled = false;

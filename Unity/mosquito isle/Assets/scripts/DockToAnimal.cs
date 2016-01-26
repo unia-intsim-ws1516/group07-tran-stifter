@@ -9,10 +9,12 @@ public class DockToAnimal : MonoBehaviour {
     GameObject playerTag;
     GameObject[] gorillasSit;
     GameObject[] gorillasMoving;
+    public GameObject dockedGorilla = null;
 
     private Camera cam;
     private BloodFeeding bf;
     private GameController gc;
+    private ScreenShakeLanding ssl;
 
     private float timer;
 
@@ -22,6 +24,7 @@ public class DockToAnimal : MonoBehaviour {
         playerTag = GameObject.FindWithTag("Player");
         gorillasSit = GameObject.FindGameObjectsWithTag("GorillaSit");
         gorillasMoving = GameObject.FindGameObjectsWithTag("GorillaMove");
+        ssl = GameObject.FindObjectOfType<ScreenShakeLanding>();
 
         cam = Camera.main;
         bf = cam.GetComponent<BloodFeeding>();
@@ -69,6 +72,8 @@ public class DockToAnimal : MonoBehaviour {
             playerTag.GetComponent<MosquitoMovement>().enabled = false;
             bf.enabled = true;
             docked = true;
+            ssl.Shake(1.6f, 0.2f);
+            dockedGorilla = nearestAnimal;
         }
         else if( Input.GetKeyDown(KeyCode.E) )
         {
