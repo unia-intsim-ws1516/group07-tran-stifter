@@ -33,9 +33,11 @@ public class EnableHeat : MonoBehaviour {
         shader2 = Shader.Find("Toon/Basic");
 
         colourVariations = new ArrayList();
-        colourVariations.Add(new Color(1, 0.549f, 0, 1));
-        colourVariations.Add(new Color(1, 0.627f, 0, 1));
+        colourVariations.Add(new Color(1, 0.5f, 0, 1));
+        colourVariations.Add(new Color(1, 0.598f, 0, 1));
+        colourVariations.Add(new Color(1, 0.635f, 0, 1));
         colourVariations.Add(new Color(1, 0.706f, 0, 1));
+        colourVariations.Add(new Color(1, 0.764f, 0.188f, 1));
         colourVariations.Add(new Color(1, 0.804f, 0.33f, 1));
         colourVariations.Add(new Color(1, 0.902f, 0.671f, 1));
         colourVariations.Add(Color.white);
@@ -85,31 +87,31 @@ public class EnableHeat : MonoBehaviour {
                 rend.material.shader = shader1;
                 if(enoughBlood == true && bf.bloodFeedingCounter == 0) 
                 {
-                    rend.material.SetColor("_Color", new Color(1, 0.549f, 0, 1));
+                    rend.material.SetColor("_Color", (Color)colourVariations[0]);
                 }
                 else if(enoughBlood == true && bf.bloodFeedingCounter == 1)
                 {
-                    rend.material.SetColor("_Color", new Color(1, 0.549f, 0, 1));
+                    rend.material.SetColor("_Color", (Color)colourVariations[1]);
                 }
                 else if (enoughBlood == true && bf.bloodFeedingCounter == 2)
                 {
-                    rend.material.SetColor("_Color", (Color)colourVariations[1]);
+                    rend.material.SetColor("_Color", (Color)colourVariations[2]);
                 }
                 else if (enoughBlood == true && bf.bloodFeedingCounter == 3)
                 {
-                    rend.material.SetColor("_Color", (Color)colourVariations[2]);
+                    rend.material.SetColor("_Color", (Color)colourVariations[3]);
                 }
                 else if (enoughBlood == true && bf.bloodFeedingCounter == 4)
                 {
-                    rend.material.SetColor("_Color", (Color)colourVariations[3]);
+                    rend.material.SetColor("_Color", (Color)colourVariations[4]);
                 }
                 else if (enoughBlood == true && bf.bloodFeedingCounter == 5)
                 {
-                    rend.material.SetColor("_Color", (Color)colourVariations[4]);
+                    rend.material.SetColor("_Color", (Color)colourVariations[5]);
                 }
                 else if(bf.bloodFeedingCounter == 6)
                 {
-                    rend.material.SetColor("_Color", (Color)colourVariations[5]);
+                    rend.material.SetColor("_Color", (Color)colourVariations[6]);
                 }
             }
         }
