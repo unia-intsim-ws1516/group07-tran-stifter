@@ -153,6 +153,8 @@ public class GameController : MonoBehaviour {
     {
         gdc.loosing = loosing;
         gdc.winning2ndLevel = winning2ndLevel;
+        gdc.timerUntilWin = gdc.timerSimulationTime;
+        gdc.timerSimulationTime = 0;
         
         Application.LoadLevel(1);
     }

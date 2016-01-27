@@ -17,6 +17,7 @@ public class GameDataContainer : MonoBehaviour {
     public bool winning2ndLevel = false;
 
     public float timerSimulationTime = 0;
+    public float timerUntilWin = 0;
 
 
     void Awake()

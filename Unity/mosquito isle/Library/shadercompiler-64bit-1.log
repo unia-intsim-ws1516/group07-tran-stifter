@@ -1,3 +1,47 @@
 Base path: C:/Program Files/Unity/Editor/Data
-Pipe name: \\.\pipe\UnityShaderCompiler-64bit-1-7860
+Pipe name: \\.\pipe\UnityShaderCompiler-64bit-1-7644
 Cmd: getPlatforms
+Cmd: compileSnippet
+  api=1 type=0 insize=3272 outsize=131 kw= pd= ok=1
+Cmd: compileSnippet
+  api=1 type=1 insize=3272 outsize=323 kw= pd= ok=1
+Cmd: compileSnippet
+  api=1 type=0 insize=3270 outsize=131 kw= pd= ok=1
+Cmd: compileSnippet
+  api=8 type=1 insize=3270 outsize=1828 kw= pd=UNITY_NO_SCREENSPACE_SHADOWS UNITY_NO_LINEAR_COLORSPACE ok=1
+Cmd: compileSnippet
+  api=1 type=1 insize=3277 outsize=1811 kw= pd= ok=1
+Cmd: compileSnippet
+  api=1 type=0 insize=1085 outsize=131 kw= pd= ok=1
+Cmd: compileSnippet
+  api=1 type=1 insize=1085 outsize=595 kw= pd= ok=1
+Cmd: compileSnippet
+  api=1 type=0 insize=1239 outsize=258 kw= pd= ok=1
+Cmd: compileSnippet
+  api=1 type=0 insize=1922 outsize=288 kw= pd= ok=1
+Cmd: compileSnippet
+  api=1 type=1 insize=1922 outsize=935 kw= pd= ok=1
+Cmd: compileSnippet
+  api=1 type=0 insize=828 outsize=131 kw= pd= ok=1
+Cmd: compileSnippet
+  api=1 type=1 insize=828 outsize=182 kw= pd= ok=1
+Cmd: compileSnippet
+  api=1 type=0 insize=1345 outsize=291 kw= pd= ok=1
+Cmd: compileSnippet
+  api=1 type=1 insize=1345 outsize=494 kw= pd= ok=1
+Cmd: compileSnippet
+  api=1 type=0 insize=13030 outsize=4385 kw=_SUNDISK_NONE pd= ok=1
+Cmd: compileSnippet
+  api=1 type=0 insize=13030 outsize=4422 kw=_SUNDISK_HIGH_QUALITY pd= ok=1
+Cmd: compileSnippet
+  api=1 type=0 insize=13030 outsize=4081 kw=UNITY_COLORSPACE_GAMMA _SUNDISK_NONE pd= ok=1
+Cmd: compileSnippet
+  api=8 type=0 insize=13030 outsize=17038 kw=UNITY_COLORSPACE_GAMMA _SUNDISK_NONE pd=UNITY_NO_SCREENSPACE_SHADOWS UNITY_NO_LINEAR_COLORSPACE ok=1
+Cmd: compileSnippet
+  api=1 type=1 insize=13030 outsize=188 kw=_SUNDISK_NONE pd= ok=1
+Cmd: compileSnippet
+  api=8 type=1 insize=13030 outsize=2836 kw=_SUNDISK_SIMPLE pd=UNITY_NO_SCREENSPACE_SHADOWS UNITY_NO_LINEAR_COLORSPACE ok=1
+Cmd: compileSnippet
+  api=8 type=1 insize=13030 outsize=1446 kw=UNITY_COLORSPACE_GAMMA _SUNDISK_NONE pd=UNITY_NO_SCREENSPACE_SHADOWS UNITY_NO_LINEAR_COLORSPACE ok=1
+Cmd: compileSnippet
+  api=4 type=1 insize=13030 outsize=2379 kw=UNITY_COLORSPACE_GAMMA _SUNDISK_HIGH_QUALITY pd= ok=1
