@@ -1,11 +1,11 @@
-Microsoft Visual Studio Solution File, Format Version 11.00
-# Visual Studio 2008
-
-Project("{F07D296C-E0E2-FEE7-0531-EC99FED3C00F}") = "mosquito isle", "Assembly-CSharp-firstpass.csproj", "{A059BF8A-E2DF-BBEF-2F18-C41F5A462AEE}"
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2015
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "mosquito isle.CSharp.Plugins", "mosquito isle.CSharp.Plugins.csproj", "{BBD9DF81-317E-F190-563A-D43F14F31211}"
 EndProject
-Project("{F07D296C-E0E2-FEE7-0531-EC99FED3C00F}") = "mosquito isle", "Assembly-CSharp.csproj", "{07642794-012B-2BBA-32B1-A09E4F6EFD91}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "mosquito isle.CSharp", "mosquito isle.CSharp.csproj", "{A5A09B99-4ADC-F1DD-2413-B1D0D3BDB972}"
 EndProject
-Project("{F07D296C-E0E2-FEE7-0531-EC99FED3C00F}") = "mosquito isle", "Assembly-CSharp-Editor.csproj", "{5BCBB7C4-9770-780B-AA87-8CBB761B8829}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "mosquito isle.CSharp.Editor", "mosquito isle.CSharp.Editor.csproj", "{5213E34F-35BA-8794-566E-11354B1028CD}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -13,40 +13,20 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{A059BF8A-E2DF-BBEF-2F18-C41F5A462AEE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{A059BF8A-E2DF-BBEF-2F18-C41F5A462AEE}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{A059BF8A-E2DF-BBEF-2F18-C41F5A462AEE}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{A059BF8A-E2DF-BBEF-2F18-C41F5A462AEE}.Release|Any CPU.Build.0 = Release|Any CPU
-		{07642794-012B-2BBA-32B1-A09E4F6EFD91}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{07642794-012B-2BBA-32B1-A09E4F6EFD91}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{07642794-012B-2BBA-32B1-A09E4F6EFD91}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{07642794-012B-2BBA-32B1-A09E4F6EFD91}.Release|Any CPU.Build.0 = Release|Any CPU
-		{5BCBB7C4-9770-780B-AA87-8CBB761B8829}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{5BCBB7C4-9770-780B-AA87-8CBB761B8829}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{5BCBB7C4-9770-780B-AA87-8CBB761B8829}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{5BCBB7C4-9770-780B-AA87-8CBB761B8829}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BBD9DF81-317E-F190-563A-D43F14F31211}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BBD9DF81-317E-F190-563A-D43F14F31211}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BBD9DF81-317E-F190-563A-D43F14F31211}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BBD9DF81-317E-F190-563A-D43F14F31211}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A5A09B99-4ADC-F1DD-2413-B1D0D3BDB972}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A5A09B99-4ADC-F1DD-2413-B1D0D3BDB972}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A5A09B99-4ADC-F1DD-2413-B1D0D3BDB972}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A5A09B99-4ADC-F1DD-2413-B1D0D3BDB972}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5213E34F-35BA-8794-566E-11354B1028CD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5213E34F-35BA-8794-566E-11354B1028CD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5213E34F-35BA-8794-566E-11354B1028CD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5213E34F-35BA-8794-566E-11354B1028CD}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
-																																																										GlobalSection(MonoDevelopProperties) = preSolution
-		StartupItem = Assembly-CSharp.csproj
-		Policies = $0
-		$0.TextStylePolicy = $1
-		$1.inheritsSet = null
-		$1.scope = text/x-csharp
-		$0.CSharpFormattingPolicy = $2
-		$2.inheritsSet = Mono
-		$2.inheritsScope = text/x-csharp
-		$2.scope = text/x-csharp
-		$0.TextStylePolicy = $3
-		$3.FileWidth = 120
-		$3.TabWidth = 4
-		$3.IndentWidth = 4
-		$3.EolMarker = Unix
-		$3.inheritsSet = Mono
-		$3.inheritsScope = text/plain
-		$3.scope = text/plain
-	EndGlobalSection
-
 EndGlobal

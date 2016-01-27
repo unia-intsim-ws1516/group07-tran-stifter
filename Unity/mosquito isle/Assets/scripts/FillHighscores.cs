@@ -115,7 +115,12 @@ public class FillHighscores : MonoBehaviour {
 
     private int calcPoints( int time )
     {
-        return (int)(scoreUpperBound - time);
+        if( gdc.loosing == true )
+        {
+            return 0;
+        }
+        else
+            return (int)(scoreUpperBound - time);
     }
 	
 	// Update is called once per frame
