@@ -78,7 +78,7 @@ public class FillHighscores : MonoBehaviour {
         points3.GetComponent<Text>().text = items.ElementAt(2).Value.ToString();
         name4.GetComponent<Text>().text = items.ElementAt(3).Key;
         points4.GetComponent<Text>().text = items.ElementAt(3).Value.ToString();
-        if( highscores.Count >= 4 )
+        if( highscores.Count > 4 )
         {
             name5.GetComponent<Text>().text = items.ElementAt(4).Key;
             points5.GetComponent<Text>().text = items.ElementAt(4).Value.ToString();
