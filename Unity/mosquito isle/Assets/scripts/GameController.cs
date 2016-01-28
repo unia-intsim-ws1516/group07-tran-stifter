@@ -69,19 +69,35 @@ public class GameController : MonoBehaviour {
             setCullingMaskAll();
             gdc.filters.enabled = true;
 
-            if( gdc.firstLevel == true )
+            if( gdc.firstLevel == true && gdc.loosing == false)
             {
                 gdc.mosqMovement.moveSpeed = moveSpeedOne;
                 gdc.filters.farClipPlaneMin = farclipOne;
                 gdc.filters.enableDownsampling(true, false);
                 gdc.filters.setHighResolution(true);
             }
-            else
+            else if( gdc.firstLevel == true && gdc.loosing == true )
+            {
+                gdc.mosqMovement.moveSpeed = moveSpeedOne;
+                gdc.filters.farClipPlaneMin = farclipOne;
+                gdc.filters.enableDownsampling(true, false);
+                gdc.filters.setHighResolution(true);
+                gdc.loosing = false;
+            }
+            else if ( gdc.firstLevel == false && gdc.loosing == false)
             {
                 gdc.mosqMovement.moveSpeed = moveSpeedTwo;
                 gdc.filters.farClipPlaneMin = farclipTwo;
                 gdc.filters.enableDownsampling(true, true);
                 gdc.filters.setLowResolution(true);
+            }
+            else if( gdc.firstLevel == false && gdc.loosing == true)
+            {
+                gdc.mosqMovement.moveSpeed = moveSpeedOne;
+                gdc.filters.farClipPlaneMin = farclipOne;
+                gdc.filters.enableDownsampling(true, false);
+                gdc.filters.setHighResolution(true);
+                gdc.loosing = false;
             }
             gdc.filters.toggleFarClipPlane();
         }   

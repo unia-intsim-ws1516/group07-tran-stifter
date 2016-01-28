@@ -2,37 +2,38 @@ Initialize engine version: 5.2.3f1 (f3d16a1fa2dd)
 GfxDevice: creating device client; threaded=1
 Direct3D:
     Version:  Direct3D 11.0 [level 11.0]
-    Renderer: NVIDIA GeForce GTX 770 (ID=0x1184)
+    Renderer: NVIDIA GeForce GT 630  (ID=0xfc2)
     Vendor:   NVIDIA
-    VRAM:     1989 MB
+    VRAM:     1994 MB
 Begin MonoManager ReloadAssembly
-Platform assembly: C:\Data\Studium\Informatik\Master\2.Semester\Interactive Simulation\group07-tran-stifter\unity\mosquito isle\mosquito_isle_Data\Managed\UnityEngine.dll (this message is harmless)
-Loading C:\Data\Studium\Informatik\Master\2.Semester\Interactive Simulation\group07-tran-stifter\unity\mosquito isle\mosquito_isle_Data\Managed\UnityEngine.dll into Unity Child Domain
-Platform assembly: C:\Data\Studium\Informatik\Master\2.Semester\Interactive Simulation\group07-tran-stifter\unity\mosquito isle\mosquito_isle_Data\Managed\Assembly-CSharp-firstpass.dll (this message is harmless)
-Loading C:\Data\Studium\Informatik\Master\2.Semester\Interactive Simulation\group07-tran-stifter\unity\mosquito isle\mosquito_isle_Data\Managed\Assembly-CSharp-firstpass.dll into Unity Child Domain
-Platform assembly: C:\Data\Studium\Informatik\Master\2.Semester\Interactive Simulation\group07-tran-stifter\unity\mosquito isle\mosquito_isle_Data\Managed\Assembly-CSharp.dll (this message is harmless)
-Loading C:\Data\Studium\Informatik\Master\2.Semester\Interactive Simulation\group07-tran-stifter\unity\mosquito isle\mosquito_isle_Data\Managed\Assembly-CSharp.dll into Unity Child Domain
-Platform assembly: C:\Data\Studium\Informatik\Master\2.Semester\Interactive Simulation\group07-tran-stifter\unity\mosquito isle\mosquito_isle_Data\Managed\Assembly-UnityScript.dll (this message is harmless)
-Loading C:\Data\Studium\Informatik\Master\2.Semester\Interactive Simulation\group07-tran-stifter\unity\mosquito isle\mosquito_isle_Data\Managed\Assembly-UnityScript.dll into Unity Child Domain
-Platform assembly: C:\Data\Studium\Informatik\Master\2.Semester\Interactive Simulation\group07-tran-stifter\unity\mosquito isle\mosquito_isle_Data\Managed\UnityEngine.UI.dll (this message is harmless)
-Loading C:\Data\Studium\Informatik\Master\2.Semester\Interactive Simulation\group07-tran-stifter\unity\mosquito isle\mosquito_isle_Data\Managed\UnityEngine.UI.dll into Unity Child Domain
-Platform assembly: C:\Data\Studium\Informatik\Master\2.Semester\Interactive Simulation\group07-tran-stifter\unity\mosquito isle\mosquito_isle_Data\Managed\UnityEngine.Networking.dll (this message is harmless)
-Loading C:\Data\Studium\Informatik\Master\2.Semester\Interactive Simulation\group07-tran-stifter\unity\mosquito isle\mosquito_isle_Data\Managed\UnityEngine.Networking.dll into Unity Child Domain
-Platform assembly: C:\Data\Studium\Informatik\Master\2.Semester\Interactive Simulation\group07-tran-stifter\unity\mosquito isle\mosquito_isle_Data\Managed\DOTween.dll (this message is harmless)
-Loading C:\Data\Studium\Informatik\Master\2.Semester\Interactive Simulation\group07-tran-stifter\unity\mosquito isle\mosquito_isle_Data\Managed\DOTween.dll into Unity Child Domain
-Platform assembly: C:\Data\Studium\Informatik\Master\2.Semester\Interactive Simulation\group07-tran-stifter\unity\mosquito isle\mosquito_isle_Data\Managed\DOTween43.dll (this message is harmless)
-Loading C:\Data\Studium\Informatik\Master\2.Semester\Interactive Simulation\group07-tran-stifter\unity\mosquito isle\mosquito_isle_Data\Managed\DOTween43.dll into Unity Child Domain
-Platform assembly: C:\Data\Studium\Informatik\Master\2.Semester\Interactive Simulation\group07-tran-stifter\unity\mosquito isle\mosquito_isle_Data\Managed\DOTween46.dll (this message is harmless)
-Loading C:\Data\Studium\Informatik\Master\2.Semester\Interactive Simulation\group07-tran-stifter\unity\mosquito isle\mosquito_isle_Data\Managed\DOTween46.dll into Unity Child Domain
-Platform assembly: C:\Data\Studium\Informatik\Master\2.Semester\Interactive Simulation\group07-tran-stifter\unity\mosquito isle\mosquito_isle_Data\Managed\DOTween50.dll (this message is harmless)
-Loading C:\Data\Studium\Informatik\Master\2.Semester\Interactive Simulation\group07-tran-stifter\unity\mosquito isle\mosquito_isle_Data\Managed\DOTween50.dll into Unity Child Domain
-Platform assembly: C:\Data\Studium\Informatik\Master\2.Semester\Interactive Simulation\group07-tran-stifter\unity\mosquito isle\mosquito_isle_Data\Managed\System.Core.dll (this message is harmless)
-- Completed reload, in  0.174 seconds
-desktop: 1920x1080 60Hz; virtual: 3600x1080 at -1680,0
+Platform assembly: C:\Users\stiftech.UNI-AUGSBURG\Desktop\intsim_git\Unity\mosquito isle\mosquito_isle_Data\Managed\UnityEngine.dll (this message is harmless)
+Loading C:\Users\stiftech.UNI-AUGSBURG\Desktop\intsim_git\Unity\mosquito isle\mosquito_isle_Data\Managed\UnityEngine.dll into Unity Child Domain
+Platform assembly: C:\Users\stiftech.UNI-AUGSBURG\Desktop\intsim_git\Unity\mosquito isle\mosquito_isle_Data\Managed\Assembly-CSharp-firstpass.dll (this message is harmless)
+Loading C:\Users\stiftech.UNI-AUGSBURG\Desktop\intsim_git\Unity\mosquito isle\mosquito_isle_Data\Managed\Assembly-CSharp-firstpass.dll into Unity Child Domain
+Platform assembly: C:\Users\stiftech.UNI-AUGSBURG\Desktop\intsim_git\Unity\mosquito isle\mosquito_isle_Data\Managed\Assembly-CSharp.dll (this message is harmless)
+Loading C:\Users\stiftech.UNI-AUGSBURG\Desktop\intsim_git\Unity\mosquito isle\mosquito_isle_Data\Managed\Assembly-CSharp.dll into Unity Child Domain
+Platform assembly: C:\Users\stiftech.UNI-AUGSBURG\Desktop\intsim_git\Unity\mosquito isle\mosquito_isle_Data\Managed\Assembly-UnityScript.dll (this message is harmless)
+Loading C:\Users\stiftech.UNI-AUGSBURG\Desktop\intsim_git\Unity\mosquito isle\mosquito_isle_Data\Managed\Assembly-UnityScript.dll into Unity Child Domain
+Platform assembly: C:\Users\stiftech.UNI-AUGSBURG\Desktop\intsim_git\Unity\mosquito isle\mosquito_isle_Data\Managed\UnityEngine.UI.dll (this message is harmless)
+Loading C:\Users\stiftech.UNI-AUGSBURG\Desktop\intsim_git\Unity\mosquito isle\mosquito_isle_Data\Managed\UnityEngine.UI.dll into Unity Child Domain
+Platform assembly: C:\Users\stiftech.UNI-AUGSBURG\Desktop\intsim_git\Unity\mosquito isle\mosquito_isle_Data\Managed\UnityEngine.Networking.dll (this message is harmless)
+Loading C:\Users\stiftech.UNI-AUGSBURG\Desktop\intsim_git\Unity\mosquito isle\mosquito_isle_Data\Managed\UnityEngine.Networking.dll into Unity Child Domain
+Platform assembly: C:\Users\stiftech.UNI-AUGSBURG\Desktop\intsim_git\Unity\mosquito isle\mosquito_isle_Data\Managed\DOTween.dll (this message is harmless)
+Loading C:\Users\stiftech.UNI-AUGSBURG\Desktop\intsim_git\Unity\mosquito isle\mosquito_isle_Data\Managed\DOTween.dll into Unity Child Domain
+Platform assembly: C:\Users\stiftech.UNI-AUGSBURG\Desktop\intsim_git\Unity\mosquito isle\mosquito_isle_Data\Managed\DOTween43.dll (this message is harmless)
+Loading C:\Users\stiftech.UNI-AUGSBURG\Desktop\intsim_git\Unity\mosquito isle\mosquito_isle_Data\Managed\DOTween43.dll into Unity Child Domain
+Platform assembly: C:\Users\stiftech.UNI-AUGSBURG\Desktop\intsim_git\Unity\mosquito isle\mosquito_isle_Data\Managed\DOTween46.dll (this message is harmless)
+Loading C:\Users\stiftech.UNI-AUGSBURG\Desktop\intsim_git\Unity\mosquito isle\mosquito_isle_Data\Managed\DOTween46.dll into Unity Child Domain
+Platform assembly: C:\Users\stiftech.UNI-AUGSBURG\Desktop\intsim_git\Unity\mosquito isle\mosquito_isle_Data\Managed\DOTween50.dll (this message is harmless)
+Loading C:\Users\stiftech.UNI-AUGSBURG\Desktop\intsim_git\Unity\mosquito isle\mosquito_isle_Data\Managed\DOTween50.dll into Unity Child Domain
+Platform assembly: C:\Users\stiftech.UNI-AUGSBURG\Desktop\intsim_git\Unity\mosquito isle\mosquito_isle_Data\Managed\System.Core.dll (this message is harmless)
+- Completed reload, in  0.303 seconds
+desktop: 1920x1080 59Hz; virtual: 1920x1080 at 0,0
 <RI> Initializing input.
+XInput1_3.dll not found. Trying XInput9_1_0.dll instead...
 <RI> Input initialized.
 <RI> Initialized touch support.
-Platform assembly: C:\Data\Studium\Informatik\Master\2.Semester\Interactive Simulation\group07-tran-stifter\unity\mosquito isle\mosquito_isle_Data\Managed\System.dll (this message is harmless)
+Platform assembly: C:\Users\stiftech.UNI-AUGSBURG\Desktop\intsim_git\Unity\mosquito isle\mosquito_isle_Data\Managed\System.dll (this message is harmless)
 The tree Fern must use the Nature/Soft Occlusion shader. Otherwise billboarding/lighting will not work correctly.
  
 (Filename:  Line: 133)
@@ -69,47 +70,28 @@ TerrainCollider: MeshCollider is not supported on terrain at the moment.
  
 (Filename:  Line: 183)
 
-Setting up 1 worker threads for Enlighten.
-  Thread -> id: 2560 -> priority: 1 
+Setting up 2 worker threads for Enlighten.
+  Thread -> id: 14a4 -> priority: 1 
+  Thread -> id: 1f78 -> priority: 1 
 Unloading 3 Unused Serialized files (Serialized files now loaded: 0)
-UnloadTime: 8.365172 ms
+UnloadTime: 7.974164 ms
 TerrainCollider: MeshCollider is not supported on terrain at the moment.
  
 (Filename:  Line: 183)
 
 
 Unloading 151 unused Assets to reduce memory usage. Loaded Objects now: 5825.
-Total: 0.912564 ms (FindLiveObjects: 0.200884 ms CreateObjectMapping: 0.046079 ms MarkObjects: 0.576451 ms  DeleteObjects: 0.075595 ms)
-
-Unloading 2 Unused Serialized files (Serialized files now loaded: 0)
-UnloadTime: 6.048524 ms
-TerrainCollider: MeshCollider is not supported on terrain at the moment.
- 
-(Filename:  Line: 183)
-
-
-Unloading 150 unused Assets to reduce memory usage. Loaded Objects now: 5829.
-Total: 0.857750 ms (FindLiveObjects: 0.149383 ms CreateObjectMapping: 0.044875 ms MarkObjects: 0.587595 ms  DeleteObjects: 0.074992 ms)
-
-Unloading 2 Unused Serialized files (Serialized files now loaded: 0)
-UnloadTime: 5.501286 ms
-TerrainCollider: MeshCollider is not supported on terrain at the moment.
- 
-(Filename:  Line: 183)
-
-
-Unloading 150 unused Assets to reduce memory usage. Loaded Objects now: 5832.
-Total: 0.805044 ms (FindLiveObjects: 0.137938 ms CreateObjectMapping: 0.043369 ms MarkObjects: 0.551152 ms  DeleteObjects: 0.072282 ms)
+Total: 0.876560 ms (FindLiveObjects: 0.176579 ms CreateObjectMapping: 0.042560 ms MarkObjects: 0.552076 ms  DeleteObjects: 0.091157 ms)
 
 DOTWEEN :: An error inside a tween callback was silently taken care of > Array index is out of range.
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 64)
 
 Unloading 3 Unused Serialized files (Serialized files now loaded: 0)
-UnloadTime: 5.158849 ms
+UnloadTime: 5.164281 ms
 
-Unloading 390 unused Assets to reduce memory usage. Loaded Objects now: 703.
-Total: 1.869702 ms (FindLiveObjects: 0.039755 ms CreateObjectMapping: 0.021082 ms MarkObjects: 0.410202 ms  DeleteObjects: 1.398361 ms)
+Unloading 390 unused Assets to reduce memory usage. Loaded Objects now: 697.
+Total: 1.340799 ms (FindLiveObjects: 0.045880 ms CreateObjectMapping: 0.020827 ms MarkObjects: 0.358592 ms  DeleteObjects: 0.914894 ms)
 
 Name1 (UnityEngine.GameObject)
  
@@ -148,12 +130,12 @@ The tree Grass 01 triple prefab must use the Nature/Soft Occlusion shader. Other
  
 (Filename:  Line: 133)
 
-UnloadTime: 1.311924 ms
+UnloadTime: 2.032328 ms
 TerrainCollider: MeshCollider is not supported on terrain at the moment.
  
 (Filename:  Line: 183)
 
 
-Unloading 26 unused Assets to reduce memory usage. Loaded Objects now: 5842.
-Total: 1.460705 ms (FindLiveObjects: 0.205101 ms CreateObjectMapping: 0.034334 ms MarkObjects: 0.689392 ms  DeleteObjects: 0.530973 ms)
+Unloading 26 unused Assets to reduce memory usage. Loaded Objects now: 5836.
+Total: 1.534584 ms (FindLiveObjects: 0.314825 ms CreateObjectMapping: 0.051615 ms MarkObjects: 0.674625 ms  DeleteObjects: 0.492612 ms)
 
